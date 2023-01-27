@@ -3,7 +3,6 @@
 * {
     /* font-family: "Poppins", sans-serif; */
     font-family: 'Roboto Slab', serif;
-    text-decoration: none;
 }
 
 
@@ -226,23 +225,27 @@ header .header-bottom .menu-social-container ul li .menu-bottom-social {
 }
 
 .banner .carousel-inner .carousel-item .banner-content {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    /* background-color: hsl(0deg 0% 100% / 80%); */
     position: absolute;
-    top: 210px;
-    left: 130;
-    line-height: 1;
+    top: 120px;
+    left: 120px;
+    padding: 20px 35px;
     font-weight: 500;
+    line-height: 1;
+    border-radius: 10px;
+    max-width: 460;
 }
 
 .banner .carousel-inner .carousel-item .banner-content .banner-subtitle {
-    font-size: 24px;
+    font-size: 29.25px;
     color: #FF8F9E;
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 10px;
+    letter-spacing: 2px;
 }
 
 .banner .carousel-inner .carousel-item .banner-content .banner-title {
-    font-size: 1.75rem;
+    font-size: 46px;
     text-transform: uppercase;
     line-height: 1;
     margin-bottom: 10px;
@@ -250,10 +253,14 @@ header .header-bottom .menu-social-container ul li .menu-bottom-social {
 }
 
 .banner .carousel-inner .carousel-item .banner-content .banner-text {
-    font-size: 1.5rem;
+    font-size: 25px;
     color: hsl(0deg 0% 47%);
     font-weight: 500;
     margin-bottom: 30px;
+}
+
+.banner .carousel-inner .carousel-item .banner-content .banner-text b {
+    font-size: 34px;
 }
 
 .banner .carousel-inner .carousel-item .banner-content .btn-banner {
@@ -261,11 +268,12 @@ header .header-bottom .menu-social-container ul li .menu-bottom-social {
     background-color: #FF8F9E;
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
     border-radius: 8px;
-    padding: 5px;
+    padding: 10px 15px;
+    transition: 0.3s ease;
 }
 
 .banner .carousel-inner .carousel-item .banner-content .btn-banner:hover {
@@ -339,8 +347,7 @@ body>section.product-container.container.mt-5>div>div>div:nth-child(1)>div>ul>li
     text-transform: uppercase;
 }
 
-
-body>section.product-container.container.mt-5>div>div>div:nth-child(1)>div>ul>li:nth-child(n+2):nth-child(-n+7) {
+body>section.product-container.container.mt-5>div>div.col-sm-3.col-md-5.col-lg-3.col-xxl-3.d-none.d-lg-block>div>div:nth-child(1)>div>ul>li:nth-child(n+2):nth-child(-n+7) {
     cursor: pointer;
 }
 
