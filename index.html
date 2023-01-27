@@ -36,30 +36,7 @@
 
 <body>
     <section class="header bg-light">
-        <section class="nav-button-offcanvas">
-            <nav class="navbar navbar-expand-lg navbar-light ">
-                <button class="navbar-toggler mb-3 border-0" href="#offcanvasExample1" type="button"
-                    data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasExample">
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-list" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-                        </svg>
-                    </span>
-                </button>
 
-                <button class="navbar-toggler mb-3 border-0" href="#offcanvasExample" type="button"
-                    data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasExample">
-                    <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-info-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                            <path
-                                d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
-                        </svg></span>
-                </button>
-            </nav>
-        </section>
         <header>
             <section class="header-top ">
                 <div class="container">
@@ -78,16 +55,19 @@
                                             <ul class="navbar-nav mt-3 d-none d-xl-block">
                                                 <div class="row">
                                                     <li class="nav-item col-3">
-                                                        <a class="nav-link" href="#"><i
-                                                                class="fa-brands fa-facebook"></i></a>
+                                                        <a class="nav-link" href="#"><ion-icon name="logo-facebook"
+                                                                role="img" class="md hydrated"
+                                                                aria-label="logo facebook"></ion-icon></a>
                                                     </li>
                                                     <li class="nav-item col-3">
-                                                        <a class="nav-link" href="#"><i
-                                                                class="fa-brands fa-twitter"></i></a>
+                                                        <a class="nav-link" href="#"><ion-icon name="logo-twitter"
+                                                                role="img" class="md hydrated"
+                                                                aria-label="logo twitter"></ion-icon></a>
                                                     </li>
                                                     <li class="nav-item col-3">
-                                                        <a class="nav-link" href="#"><i
-                                                                class="fa-brands fa-instagram"></i></a>
+                                                        <a class="nav-link" href="#"><ion-icon name="logo-instagram"
+                                                                role="img" class="md hydrated"
+                                                                aria-label="logo instagram"></ion-icon></a>
                                                     </li>
                                                     <li class="nav-item col-3">
                                                         <a class="nav-link" href="#"><i
@@ -160,13 +140,19 @@
                                 <ul class="d-none d-lg-block navbar-nav" style="font-size: 24px;">
                                     <div class="row text-center">
                                         <li class="nav-item col-3 ">
-                                            <a class="nav-link " href="#"><i class="fa-solid fa-user"></i></a>
+                                            <a class="nav-link " href="#"><ion-icon name="person-outline" role="img"
+                                                    class="md hydrated" aria-label="person outline"></ion-icon>
+                                            </a>
                                         </li>
                                         <li class="nav-item col-3">
-                                            <a class="nav-link" href="#"><i class="fa-solid fa-heart"></i></a>
+                                            <a class="nav-link" href="#"><ion-icon name="heart-outline" role="img"
+                                                    class="md hydrated" aria-label="heart outline"></ion-icon>
+                                            </a>
                                         </li>
                                         <li class="nav-item col-3">
-                                            <a class="nav-link" href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                                            <a class="nav-link" href="#"><ion-icon name="bag-handle-outline" role="img"
+                                                    class="md hydrated" aria-label="bag handle outline"></ion-icon>
+                                            </a>
                                         </li>
                                     </div>
                                 </ul>
@@ -417,6 +403,32 @@
                 </nav>
             </section>
         </header>
+        <!-- navbar-mobile -->
+        <section class="nav-button-offcanvas fixed-bottom d-xl-none d-block" style="background-color: #fff;">
+            <nav class="navbar navbar-expand-lg ">
+                <button class="navbar-toggler border-0" href="#offcanvasExample1" type="button"
+                    data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasExample">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                    </span>
+                </button>
+
+                <button class="navbar-toggler border-0" href="#offcanvasExample" type="button"
+                    data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasExample">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-info-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path
+                                d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                        </svg></span>
+                </button>
+            </nav>
+        </section>
+
     </section>
     <section class="banner container mt-3">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -615,7 +627,7 @@
     <section class="product-container container mt-5">
         <div class="row">
             <!-- sidebar -->
-            <div class=" col-sm-3 col-md-5 col-lg-3 col-xxl-3">
+            <div class=" col-sm-3 col-md-5 col-lg-3 col-xxl-3 ">
                 <div class="siderbar sticky-top">
                     <div class="row">
                         <div class="sidebar-top">
@@ -3184,6 +3196,7 @@
             </div>
         </div>
     </section>
+
     <section class="blog mt-5">
         <div class="container">
             <div class="owl-carousel owl-theme" id="blog">
@@ -3267,6 +3280,7 @@
             </div>
         </div>
     </section>
+
     <section class="footer mt-5">
         <footer>
             <section class="footer-category p-5">
@@ -3396,7 +3410,7 @@
             </section>
             <section class="footer-bottom text-center">
                 <div class="container ">
-                    <img class="col-12" src="images/payment.png" alt="" srcset="">
+                    <img class="" src="images/payment.png" alt="" srcset="">
                     <p class="copyright">
                         Copyright ©
                         <a class="text-decoration-none" style="color: #787878;" href="">LND</a>
@@ -3406,6 +3420,7 @@
             </section>
         </footer>
     </section>
+
 </body>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/jquery-3.6.3.min.js"></script>
