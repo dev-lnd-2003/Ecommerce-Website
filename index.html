@@ -19,8 +19,6 @@
      -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
     <!-- icons -->
     <link rel="stylesheet" href="icons/css/all.css">
     <!-- 
@@ -36,80 +34,11 @@
 </head>
 
 <body ng-app="myApp">
-    <section class="header bg-light ">
+
+    <section class="header bg-light " ng-controller="headerCtrl">
         <header>
-            <section class="header-top ">
-                <div class="container">
-                    <div class="row">
-                        <div class="header-social-container mt-1">
-                            <nav class="navbar navbar-expand-lg navbar-light ">
-                                <div class="container">
-                                    <div class="offcanvas offcanvas-start" id="offcanvasExample"
-                                        aria-labelledby="offcanvasExampleLabel">
-                                        <div class="offcanvas-header">
-                                            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Giới Thiệu</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="offcanvas-body ">
-                                            <ul class="navbar-nav mt-3 d-none d-xl-block">
-                                                <div class="row">
-                                                    <li class="nav-item col-3">
-                                                        <a class="nav-link" href="#"><ion-icon name="logo-facebook"
-                                                                role="img" class="md hydrated"
-                                                                aria-label="logo facebook"></ion-icon></a>
-                                                    </li>
-                                                    <li class="nav-item col-3">
-                                                        <a class="nav-link" href="#"><ion-icon name="logo-twitter"
-                                                                role="img" class="md hydrated"
-                                                                aria-label="logo twitter"></ion-icon></a>
-                                                    </li>
-                                                    <li class="nav-item col-3">
-                                                        <a class="nav-link" href="#"><ion-icon name="logo-instagram"
-                                                                role="img" class="md hydrated"
-                                                                aria-label="logo instagram"></ion-icon></a>
-                                                    </li>
-                                                    <li class="nav-item col-3">
-                                                        <a class="nav-link" href="#"><i
-                                                                class="fa-brands fa-linkedin"></i></a>
-                                                    </li>
-                                                </div>
-                                            </ul>
-                                            <div class="mx-auto">
-                                                <div class="header-alert-news text-center">
-                                                    <p class="mt-3"> <b>Miễn Phí Vận Chuyển</b> Đơn Đặt Hàng Trong Tuần
-                                                        Này Từ
-                                                        1.000.000 Trở Lên
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div class="header-top-actions mt-2">
-                                                    <div class="row">
-                                                        <div class="col-sm-6 mb-2">
-                                                            <select name="" id="" class="form-select currency">
-                                                                <option value="">VND</option>
-                                                                <option value="">USD</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-sm-6 mb-2">
-                                                            <select name="" id="" class="form-select language">
-                                                                <option value="">English</option>
-                                                                <option value="">Vietnamese</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <hr class="d-none d-sm-block ">
+            <div ng-include="'layout/headertop.html'"></div>
+
             <section class="header-main mt-3 ">
                 <div class="container">
                     <div class="row">
@@ -128,7 +57,7 @@
                             </div>
                         </div>
                         <div class="col-sm-8 p-0 mt-3">
-                            <div class="header-midle-search">
+                            <div class="header-midle-search mx-auto">
                                 <input type="text" class="form-control" placeholder="Nhập Tên Sản Phẩm">
                                 <button class="btn-search">
                                     <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
@@ -139,20 +68,76 @@
                             <div class="header-midle-user ">
                                 <ul class="d-none d-lg-block navbar-nav" style="font-size: 24px;">
                                     <div class="row text-center">
-                                        <li class="nav-item col-3 ">
-                                            <a class="nav-link " href="#!login"><ion-icon name="person-outline"
-                                                    role="img" class="md hydrated"
-                                                    aria-label="person outline"></ion-icon>
+                                        <li class="nav-item col-3 dropdown" ng-show="isUser">
+                                            <a class="nav-link dropdown " id="dropdownUser" data-bs-toggle="dropdown" role="button">
+                                                <ion-icon name="person-outline" role="img" class="md hydrated" aria-label="person outline"></ion-icon>
+                                            </a>
+                                            <ul class="dropdown-menu" style="border: 1px solid #f2f2f2" aria-labelledby="dropdownMenuLink">
+                                                <li>
+                                                    <a class="dropdown-item d-flex align-items-center gap-2 mb-2 mt-2" style="font-weight: 600;" href="#!/login">
+                                                        Đăng Nhập <ion-icon style="font-size: 24px;" name="log-in-outline"></ion-icon>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item col-3 dropdown" ng-hide="isAvatar">
+                                            <a class="nav-link dropdown " id="dropdownUser" data-bs-toggle="dropdown" role="button">
+                                                <img src="{{avatar}}" alt="" srcset="" width="24" height="24" style="border-radius: 10px;">
+                                            </a>
+                                            <ul class="dropdown-menu text-center" style="border: 1px solid #f2f2f2;" aria-labelledby="dropdownMenuLink">
+                                                <div class="info-customer">
+                                                    <img class="avatar-img mb-2 mt-2 " src="https://i.pinimg.com/564x/4a/3b/c4/4a3bc419410c35faafcfb830732a5bb6.jpg" alt="" srcset="">
+                                                    <h3 class="customer-name">{{fullname}}</h3>
+                                                    <p>Tài Khoản Của Bạn</p>
+                                                    <hr>
+                                                    <div class="customer-content">
+                                                        <ul class="navbar-nav p-0">
+                                                            <li>
+                                                                <a class="dropdown-item d-flex" href="">Hồ Sơ Cá Nhân</a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="dropdown-item d-flex" href="">Thêm Tài Khoản</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="customer-content-other">
+                                                        <li>
+                                                            <a class="dropdown-item d-flex" href="">Cài Đặt</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item d-flex" href="">Điều Chỉnh Bảng Tin</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item d-flex" href="">Cài Đặt Ứng Dụng Windows</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item d-flex" href="">Quyền Riêng Tư Của Bạn</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item d-flex" href="">Nhận Trợ Giúp</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item d-flex" href="">Xem Điều Khoản Dịch Vụ</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item d-flex" href="">Xem Chính Sách sQuyền Riêng Tư Của Bạn</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item d-flex align-items-center gap-2 mb-2" style="font-weight: 600;" ng-click="logout()">
+                                                                Đăng Xuất <ion-icon style="font-size: 24px;" name="log-in-outline"></ion-icon>
+                                                            </a>
+                                                        </li>
+                                                    </div>
+                                                </div>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item col-3">
+                                            <a class="nav-link " href="#"><ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
                                             </a>
                                         </li>
                                         <li class="nav-item col-3">
-                                            <a class="nav-link" href="#"><ion-icon name="heart-outline" role="img"
-                                                    class="md hydrated" aria-label="heart outline"></ion-icon>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item col-3">
-                                            <a class="nav-link" href="#"><ion-icon name="bag-handle-outline" role="img"
-                                                    class="md hydrated" aria-label="bag handle outline"></ion-icon>
+                                            <a class="nav-link" href="#"><ion-icon name="bag-handle-outline" role="img" class="md hydrated" aria-label="bag handle outline"></ion-icon>
                                             </a>
                                         </li>
                                     </div>
@@ -162,418 +147,15 @@
                     </div>
                 </div>
             </section>
-            <hr class="d-none d-sm-block ">
-            <section class="header-bottom">
-                <nav class="navbar navbar-expand-lg navbar-light ">
-                    <div class="container">
-                        <div class="offcanvas offcanvas-start container" id="offcanvasExample1"
-                            aria-labelledby="offcanvasExampleLabel">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasExampleLabel1">Menu</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="offcanvas-body ">
-                                <div class="mx-auto">
-                                    <ul class="navbar-nav mx-auto">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#!home">Trang Chủ</a>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown" data-bs-toggle="dropdown" role="button"
-                                                aria-expanded="false">
-                                                Loại Sản Phẩm
-                                            </a>
-                                            <div class="dropdown-menu p-3">
-                                                <ul class="mx-auto">
-                                                    <li><a href="" class="dropdown-item disabled">Công Nghệ</a></li>
-                                                    <li><a href="" class="dropdown-item">Pc & Laptop</a></li>
-                                                    <li><a href="" class="dropdown-item">Máy Ảnh</a></li>
-                                                    <li><a href="" class="dropdown-item">Điện Thoại</a></li>
-                                                    <li><a href="" class="dropdown-item">Máy Tính Bảng</a></li>
-                                                    <li><a href="" class="dropdown-item">Tai Nghe</a></li>
-                                                    <!-- <img class="d-none d-sm-block"
-                                                        src="https://img.freepik.com/free-photo/beautiful-smiling-woman-dressed-jeans-clothes_158538-19171.jpg?w=1380&t=st=1674803984~exp=1674804584~hmac=e130f623c0e971c4c8dae2d7b3d93008a3223751ba9ea9e23f5bb249917c038d"
-                                                        alt="" width="210" style="border-radius: 10px;"> -->
-                                                </ul>
-                                                <ul class="mx-auto">
-                                                    <li><a href="" class="dropdown-item disabled">Nam Giới</a></li>
-                                                    <li><a href="" class="dropdown-item">Mùa Hè</a></li>
-                                                    <li><a href="" class="dropdown-item">Đám Tiệc</a></li>
-                                                    <li><a href="" class="dropdown-item">Áo Khoác</a></li>
-                                                    <li><a href="" class="dropdown-item">Thể Thao</a></li>
-                                                    <li><a href="" class="dropdown-item">Năng Động</a></li>
-                                                    <!-- <img class="d-none d-sm-block"
-                                                        src="https://img.freepik.com/free-photo/portrait-young-handsome-man-buttoning-his-jacket_171337-19819.jpg?w=1380&t=st=1674803683~exp=1674804283~hmac=062461bb28b2bf62ae184d2eab5ee038e79196a4a61479b791c5e20ac078769c"
-                                                        alt="" srcset="" width="210" style="border-radius: 10px;"> -->
-                                                </ul>
-                                                <ul class="mx-auto">
-                                                    <li><a href="" class="dropdown-item disabled">Nữ Giới</a></li>
-                                                    <li><a href="" class="dropdown-item">Dạ Hội</a></li>
-                                                    <li><a href="" class="dropdown-item">Nước Hoa</a></li>
-                                                    <li><a href="" class="dropdown-item">Làm Đẹp</a></li>
-                                                    <li><a href="" class="dropdown-item">Túi Xác</a></li>
-                                                    <li><a href="" class="dropdown-item">Giản Dị</a>
-                                                        <!-- <img class="d-none d-sm-block"
-                                                            src="https://img.freepik.com/free-photo/pensive-asian-woman-black-hat-looking-camera-studio-shot-glamorous-japanese-model-isolated-beige-background_197531-14544.jpg?w=1380&t=st=1674804091~exp=1674804691~hmac=3d37716602dc9ae557e0b6559649274b14170cc95eb33c012bbc35fa54ecb2fc"
-                                                            alt="" srcset="" width="210" style="border-radius: 10px;"> -->
-                                                </ul>
-                                                <ul class="mx-auto">
-                                                    <li><a href="" class="dropdown-item disabled">Điện Tử</a></li>
-                                                    <li><a href="" class="dropdown-item">Smart Watch</a> </li>
-                                                    <li><a href="" class="dropdown-item">Smart TV</a> </li>
-                                                    <li><a href="" class="dropdown-item">Keyboard</a></li>
-                                                    <li><a href="" class="dropdown-item">Mouse</a></li>
-                                                    <li><a href="" class="dropdown-item">Microphone</a></li>
-                                                    <!-- <img class="d-none d-sm-block"
-                                                        src="https://img.freepik.com/free-photo/panoramic-view-white-office-desk-with-laptop-apple-stationeries_23-2148178597.jpg?w=1380&t=st=1674804319~exp=1674804919~hmac=2073867538af104cfc732a17145ace3c7efbaffc23ded636bf6598a1ccefceb3"
-                                                        alt="" srcset="" width="210" style="border-radius: 10px;"> -->
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown" data-bs-toggle="dropdown" role="button"
-                                                aria-expanded="false">
-                                                Nam Giới
-                                            </a>
-                                            <div class="dropdown-menu ">
-                                                <ul class="mx-auto">
-                                                    <li><a href="" class="dropdown-item disabled">Nam</a></li>
-                                                    <li><a href="" class="dropdown-item">Áo Khoác</a></li>
-                                                    <li><a href="" class="dropdown-item">Áo Sơ Mi</a></li>
-                                                    <li><a href="" class="dropdown-item">Ví Tiền</a></li>
-                                                    <li><a href="" class="dropdown-item">Quần Short & Jean</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown" data-bs-toggle="dropdown" role="button"
-                                                aria-expanded="false">
-                                                Phụ Nữ
-                                            </a>
-                                            <div class="dropdown-menu ">
-                                                <ul class="mx-auto">
-                                                    <li><a href="" class="dropdown-item disabled">Nữ Giới</a></li>
-                                                    <li><a href="" class="dropdown-item">Dạ Hội</a></li>
-                                                    <li><a href="" class="dropdown-item">Nước Hoa</a></li>
-                                                    <li><a href="" class="dropdown-item">Làm Đẹp</a></li>
-                                                    <li><a href="" class="dropdown-item">Túi Xác</a></li>
-                                                    <li><a href="" class="dropdown-item">Giản Dị</a></li>
-                                            </div>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown" data-bs-toggle="dropdown" aria-expanded="false"
-                                                href="#">Trang
-                                                Sức</a>
-                                            <div class="dropdown-menu p-3 ">
-                                                <ul>
-                                                    <li><a href="" class="dropdown-item disabled">Chủng Loại</a></li>
-                                                    <li><a href="" class="dropdown-item">Nhẫn</a></li>
-                                                    <li><a href="" class="dropdown-item">Bông Tai</a></li>
-                                                    <li><a href="" class="dropdown-item">Lắc</a></li>
-                                                    <li><a href="" class="dropdown-item">Vòng</a></li>
-                                                    <li><a href="" class="dropdown-item">Kiềng</a></li>
-                                                    <li><a href="" class="dropdown-item">Mặt Dây Chuyền</a></li>
-                                                    <li><a href="" class="dropdown-item">Dây Cổ</a></li>
-                                                    <li><a href="" class="dropdown-item">Charm </a></li>
-                                                    <li><a href="" class="dropdown-item">Vàng Tài Lộc</a></li>
-                                                </ul>
-                                                <ul>
-                                                    <li><a href="" class="dropdown-item disabled">Chất Liệu</a></li>
-                                                    <li><a href="" class="dropdown-item">Vàng</a></li>
-                                                    <li><a href="" class="dropdown-item">Bạc</a></li>
-                                                    <li><a href="" class="dropdown-item">Platium</a></li>
-                                                </ul>
-                                                <ul>
-                                                    <li><a href="" class="dropdown-item disabled">Dòng Hàng</a></li>
-                                                    <li><a href="" class="dropdown-item">Trang Sức Đính Kim Cương</a>
-                                                    </li>
-                                                    <li><a href="" class="dropdown-item disabled">Trang Sức Đính
-                                                            ECZ-CZ</a></li>
-                                                    <li><a href="" class="dropdown-item">Trang Sức Đính Đá Quý Và Bán
-                                                            Quý</a></li>
-                                                    <li><a href="" class="dropdown-item">Trang Sức Công Nghệ Ý</a></li>
-                                                    <li><a href="" class="dropdown-item">Trang Sức Đính Ngọc Trai</a>
-                                                    </li>
-                                                    <li><a href="" class="dropdown-item">Trang Sức Đính CZ</a></li>
-                                                    <li><a href="" class="dropdown-item">Trang Sức Không Đính Đá</a>
-                                                    </li>
-                                                    <li><a href="" class="dropdown-item">Kim Cương Viên</a></li>
-                                                </ul>
-                                                <ul>
-                                                    <li><a href="" class="dropdown-item disabled">Bộ Sưu Tập</a></li>
-                                                    <li><a href="" class="dropdown-item">Thần Tài 2023</a></li>
-                                                    <li><a href="" class="dropdown-item">Lucky Mickey</a></li>
-                                                    <li><a href="" class="dropdown-item">Nàng Tiên Cá Ariel</a></li>
-                                                    <li><a href="" class="dropdown-item">Alice In Wonderland</a></li>
-                                                    <li><a href="" class="dropdown-item">The Merier</a></li>
-                                                    <li><a href="" class="dropdown-item">Sứ Giả Mùa Xuân</a></li>
-                                                    <li><a href="" class="dropdown-item">Nụ Cười Tầm Xuân</a></li>
-                                                    <li><a href="" class="dropdown-item">Thần Tài 2022</a></li>
-                                                    <li><a href="" class="dropdown-item">Tinker Bell</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Nước Hoa</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Blog</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#" style="color: #FF8F9E;">Khuyến Mãi</a>
-                                        </li>
-                                    </ul>
 
-                                </div>
-                                <br>
-                                <div class="menu-bottom mt-3">
-                                    <div class="menu-category">
-                                        <ul class="navbar-nav d-lg-none d-block">
-                                            <li class="list-group-item border-0 mb-3">
-                                                <div data-bs-toggle="collapse" data-bs-target="#language"
-                                                    class="collapsed before after ">
-                                                    <div class="d-flex align-items-center" style="gap: 10px;">
-                                                        <p class="menu-title m-0">Ngôn Ngữ</p>
-                                                        <div class="ms-auto">
-                                                            <ion-icon name="caret-back-outline" class="caret-back"
-                                                                role="img" aria-label="caret back outline"></ion-icon>
-                                                        </div>
-                                                    </div>
-                                                    <div id="language" class="collapse ">
-                                                        <hr>
-                                                        <div class="product ">
-                                                            <p class="language-name" href="">English</p>
-                                                        </div>
-                                                        <div class="product">
-                                                            <p class="language-name" href="">Vietnamese</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="list-group-item border-0 mb-3">
-                                                <div data-bs-toggle="collapse" data-bs-target="#currency"
-                                                    class="collapsed before after ">
-                                                    <div class="d-flex align-items-center" style="gap: 10px;">
-                                                        <p class="menu-title m-0">Đơn Vị Tiền</p>
-                                                        <div class="ms-auto">
-                                                            <ion-icon name="caret-back-outline" class="caret-back"
-                                                                role="img" aria-label="caret back outline"></ion-icon>
-                                                        </div>
-                                                    </div>
-                                                    <div id="currency" class="collapse ">
-                                                        <hr>
-                                                        <div class="product ">
-                                                            <p class="language-name" href="">USD</p>
-                                                        </div>
-                                                        <div class="product">
-                                                            <p class="language-name" href="">VNĐ</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="menu-social-container mt-5 text-center ">
-                                    <ul class="navbar-nav d-flex d-lg-none d-block">
-                                        <li class="nav-item">
-                                            <a class="menu-bottom-social" href="#" aria-current="page">
-                                                <ion-icon name="logo-facebook" role="img" class="md hydrated"
-                                                    aria-label="logo facebook"></ion-icon>
-                                            </a>
-                                            <a class="menu-bottom-social" href="#" aria-current="page">
-                                                <ion-icon name="logo-twitter" role="img" class="md hydrated"
-                                                    aria-label="logo twitter"></ion-icon>
-                                            </a>
-                                            <a class="menu-bottom-social" href="#">
-                                                <ion-icon name="logo-instagram" role="img" class="md hydrated"
-                                                    aria-label="logo instagram"></ion-icon>
-                                            </a>
-                                            <a class="menu-bottom-social" href="#">
-                                                <ion-icon name="logo-linkedin" role="img" class="md hydrated"
-                                                    aria-label="logo linkedin"></ion-icon>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </nav>
-            </section>
+            <div ng-include="'layout/headerbottom.html'"></div>
         </header>
-        <!-- navbar-mobile -->
-        <section class="nav-button-offcanvas fixed-bottom d-xl-none d-block" style="background-color: #fff;">
-            <nav class="navbar navbar-expand-lg ">
-                <button class="navbar-toggler border-0" href="#offcanvasExample1" type="button"
-                    data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasExample">
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-list" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-                        </svg>
-                    </span>
-                </button>
-
-                <button class="navbar-toggler border-0" href="#offcanvasExample" type="button"
-                    data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasExample">
-                    <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-info-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                            <path
-                                d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
-                        </svg></span>
-                </button>
-            </nav>
-        </section>
-
     </section>
+    <div ng-include="'layout/navbarmobile.html'"></div>
     <div class="">
         <ng-view></ng-view>
     </div>
-
-    <section class="footer mt-5">
-        <footer>
-            <section class="footer-category p-5">
-                <div class="container">
-                    <h2 class="footer-category-title">Loại Sản Phẩm</h2>
-                    <div class="footer-category-box d-flex flex-wrap align-items-center">
-                        <h3 class="category-box-title m-0">Fashion :</h3>
-                        <a href="" class="footer-category-link text-decoration-none">Áo Thun</a>
-                        <a href="" class="footer-category-link text-decoration-none">Áo Sơ Mi</a>
-                        <a href="" class="footer-category-link text-decoration-none">Quần Shorts & Jeans</a>
-                        <a href="" class="footer-category-link text-decoration-none">Áo Khoác</a>
-                        <a href="" class="footer-category-link text-decoration-none">Váy & Đầm</a>
-                    </div>
-                    <div class="footer-category-box d-flex flex-wrap align-items-center">
-                        <h3 class="category-box-title m-0">Giày Dép :</h3>
-                        <a href="" class="footer-category-link text-decoration-none">Thể Thao</a>
-                        <a href="" class="footer-category-link text-decoration-none">Truyền Thống</a>
-                        <a href="" class="footer-category-link text-decoration-none">Hiện Đại</a>
-                        <a href="" class="footer-category-link text-decoration-none">Dạ Hội</a>
-                        <a href="" class="footer-category-link text-decoration-none">Giày Cao Bồi</a>
-                        <a href="" class="footer-category-link text-decoration-none">Thương Hiệu</a>
-                        <a href="" class="footer-category-link text-decoration-none">Giày Dài</a>
-                    </div>
-                    <div class="footer-category-box d-flex flex-wrap align-items-center">
-                        <h3 class="category-box-title m-0">Trang Sức :</h3>
-                        <a href="" class="footer-category-link text-decoration-none">Vòng Cổ</a>
-                        <a href="" class="footer-category-link text-decoration-none">Bông Tai</a>
-                        <a href="" class="footer-category-link text-decoration-none">Nhẫn</a>
-                        <a href="" class="footer-category-link text-decoration-none">Mặt Dây Chuyền</a>
-                        <a href="" class="footer-category-link text-decoration-none">Pha Lê</a>
-                        <a href="" class="footer-category-link text-decoration-none">Lắc Tay</a>
-                        <a href="" class="footer-category-link text-decoration-none">Nhẫn Cặp</a>
-                        <a href="" class="footer-category-link text-decoration-none">Kiềng</a>
-                    </div>
-                    <div class="footer-category-box d-flex flex-wrap align-items-center">
-                        <h3 class="category-box-title m-0">Làm Đẹp</h3>
-                        <a href="" class="footer-category-link text-decoration-none">Dầu Gội</a>
-                        <a href="" class="footer-category-link text-decoration-none">Bộ Trang Điểm</a>
-                        <a href="" class="footer-category-link text-decoration-none">Son Môi</a>
-                        <a href="" class="footer-category-link text-decoration-none">Nước Hoa</a>
-                        <a href="" class="footer-category-link text-decoration-none">Thuốc Nhuộm Tóc</a>
-                        <a href="" class="footer-category-link text-decoration-none">Kem Chống Nắng</a>
-                        <a href="" class="footer-category-link text-decoration-none">Son Môi</a>
-                    </div>
-                </div>
-            </section>
-            <section class="footer-nav">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <ul class="list-group list-group-light ">
-                                <li class="list-group-item border-0">
-                                    <h2 class="footer-nav-title">
-                                        Công Ty Của Chúng Tôi
-                                    </h2>
-                                </li>
-                                <li class="list-group-item border-0">
-                                    <a class="footer-nav-link" href="">Giới Thiệu</a>
-                                </li>
-                                <li class="list-group-item border-0">
-
-                                    <a class="footer-nav-link" href="">Chính Sách</a>
-                                </li>
-                                <li class="list-group-item border-0">
-                                    <a class="footer-nav-link" href="">Các Điều Khoản</a>
-                                </li>
-                                <li class="list-group-item border-0">
-                                    <a class="footer-nav-link" href="">Giao Hàng</a>
-                                </li>
-                                <li class="list-group-item border-0">
-                                    <a class="footer-nav-link" href="">An Toàn Giao Dịch</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-4">
-                            <ul class="list-group list-group-light ">
-                                <li class="list-group-item border-0">
-                                    <h2 class="footer-nav-title">
-                                        Dịch Vụ Của Chúng Tôi
-                                    </h2>
-                                </li>
-                                <li class="list-group-item border-0">
-                                    <a class="footer-nav-link" href="">Giảm Giá</a>
-                                </li>
-                                <li class="list-group-item border-0">
-
-                                    <a class="footer-nav-link" href="">Sản Phẩm Mới</a>
-                                </li>
-                                <li class="list-group-item border-0">
-                                    <a class="footer-nav-link" href="">Hàng Bán Chạy Nhất</a>
-                                </li>
-                                <li class="list-group-item border-0">
-                                    <a class="footer-nav-link" href="">Liên Hệ Với Chúng Tôi</a>
-                                </li>
-                                <li class="list-group-item border-0">
-                                    <a class="footer-nav-link" href="">Sitemap</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-4">
-                            <ul class="list-group list-group-light ">
-                                <li class="list-group-item border-0">
-                                    <h2 class="footer-nav-title">
-                                        Thông Tin Liên Hệ
-                                    </h2>
-                                </li>
-                                <li class="list-group-item border-0" style="color: #787878; font-size: 18px;">
-                                    <ion-icon name="location-outline" role="img" class="md hydrated"
-                                        aria-label="location outline"></ion-icon>
-                                    123456789A,Phú Lợi,Xã Tân Phú Trung, Huyện Củ Chi, TP.Hồ Chí Minh.
-                                </li>
-                                <li class="list-group-item border-0" style="color: #787878; font-size: 18px;">
-                                    <ion-icon name="call-outline" role="img" class="md hydrated"
-                                        aria-label="call outline"></ion-icon>
-                                    <a class="footer-nav-link" href=""> ĐT: 028 39951703 - Fax: 028 3995 1702</a>
-                                </li>
-                                <li class="list-group-item border-0" style="color: #787878;font-size: 18px;">
-                                    <ion-icon name="mail-outline" role="img" class="md hydrated"
-                                        aria-label="mail outline"></ion-icon>
-                                    <a class="footer-nav-link" href="">Mail@Gmail.com</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-            <section class="footer-bottom text-center">
-                <div class="container ">
-                    <img class="" src="images/payment.png" alt="" srcset="">
-                    <p class="copyright">
-                        Copyright ©
-                        <a class="text-decoration-none" style="color: #787878;" href="">LND</a>
-                        all rights reserved.
-                    </p>
-                </div>
-            </section>
-        </footer>
-    </section>
+    <div ng-include="'layout/footer.html'"></div>
 
 </body>
 <script src="js/bootstrap.bundle.min.js"></script>
@@ -586,6 +168,8 @@
 <script src="js/angular.min.js"></script>
 <script src="js/angular-route.js"></script>
 <script src="js/app/app.js"></script>
+<script src="js/controller/headerCtrl.js"></script>
+<script src="js/controller/loginCtrl.js"></script>
 
 
 </html>
