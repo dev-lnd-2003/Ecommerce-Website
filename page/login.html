@@ -1,0 +1,124 @@
+<head>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .login {
+            /* margin-top: 200px;
+            margin-bottom: 200px; */
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .row-login {
+            background-color: white;
+            border-radius: 30px;
+            box-shadow: 1px 7px 28px 8px rgba(235, 178, 191, 0.6);
+            -webkit-box-shadow: 1px 7px 28px 8px rgba(235, 178, 191, 0.6);
+            -moz-box-shadow: 1px 7px 28px 8px rgba(235, 178, 191, 0.6);
+            height: 600px;
+
+        }
+
+        .login img {
+            height: 600px;
+
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+
+        .login h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .input {
+            height: 50px;
+            width: 70%;
+            border: none;
+            outline: none;
+            border-radius: 60px;
+            font-weight: 700;
+            box-shadow: 1px 7px 28px 8px rgba(235, 178, 191, 0.6);
+            -webkit-box-shadow: 1px 7px 28px 8px rgba(235, 178, 191, 0.6);
+            -moz-box-shadow: 1px 7px 28px 8px rgba(235, 178, 191, 0.6);
+        }
+
+        .login .btn {
+            font-weight: 700;
+            color: rgb(255, 255, 255);
+            border-radius: 30px;
+            background-color: rgba(255, 124, 155, 0.864);
+            width: 150px;
+            box-shadow: 1px 7px 28px 8px rgba(235, 178, 191, 0.6);
+            -webkit-box-shadow: 1px 7px 28px 8px rgba(235, 178, 191, 0.6);
+            -moz-box-shadow: 1px 7px 28px 8px rgba(235, 178, 191, 0.6);
+        }
+
+        .login .btn:hover {
+            background-color: white;
+            color: rgba(235, 178, 191, 0.6);
+        }
+
+        .login .fa-brands {
+            padding: 10px;
+        }
+
+        .login .fa-facebook {
+            cursor: pointer;
+            font-size: 2.5rem;
+            color: blue;
+        }
+
+        .login .fa-google {
+            cursor: pointer;
+            font-size: 2.5rem;
+            color: rgba(244, 12, 12, 0.817);
+        }
+
+        .login .fa-twitter {
+            cursor: pointer;
+            font-size: 2.5rem;
+            color: rgba(0, 149, 255, 0.601);
+        }
+    </style>
+</head>
+<section class="login ">
+    <div class="container">
+        <div class="row row-login mx-auto">
+            <div class="d-none d-sm-block col-sm-6 col-lg-7 p-0">
+                <img class="img-fluid"
+                    src="https://img.freepik.com/free-photo/happy-woman-with-wavy-brown-hair-laughing-jocund-girl-striped-pink-attire-smiling_197531-9823.jpg?w=1380&t=st=1674196080~exp=1674196680~hmac=5c7c5b9e4b099b0b5db2079fe176ea395777eb8f077a683b2cfb76ab5507ab71"
+                    alt="">
+            </div>
+            <div class="col-sm-6  col-lg-5 text-center py-5 mt-5">
+                <h1 class="animate__heartBeat">Welcome Back</h1>
+                <form id="login">
+                    <div class="form-group pt-5 ">
+                        <div class="py-3 ">
+                            <input ng-model="username" type="text" class="input form-control mx-auto"
+                                placeholder="Username">
+                        </div>
+                        <div class="py-3  ">
+                            <input ng-model="password" type="password" class="input form-control mx-auto"
+                                placeholder="Password">
+                        </div>
+                        <div class=" py-3 ">
+                            <button class="btn">Sign In</button>
+                        </div>
+                        <!-- <div class=" py-3 ">
+                            <button ng-click="register()" class="btn">Sign Up</button>
+                        </div> -->
+                    </div>
+                </form>
+                <p class="mt-3">Or Login With</p>
+                <span><a href=""><i class="fa-brands fa-facebook"></i></a></span>
+                <span><a href=""><i class="fa-brands fa-google"></i></a></span>
+                <span><a href=""><i class="fa-brands fa-twitter"></i></a></i></span>
+            </div>
+        </div>
+    </div>
+</section>
