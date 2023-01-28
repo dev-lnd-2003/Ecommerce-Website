@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "username": "duylnps21977",
+        "password": "123123",
+        "fullname": "Lê Nhật Duy",
+        "email": "duylnps21977",
+        "gender": "true",
+        "birthday": "06-12-2003",
+        "money": "15000000",
+        "avatar": "https://i.pinimg.com/564x/4a/3b/c4/4a3bc419410c35faafcfb830732a5bb6.jpg"
+    },
+    {
+        "id": 2,
+        "username": "duylnps21978",
+        "password": "123123",
+        "fullname": "Lê Nhât Duy",
+        "email": "duylnps21977",
+        "gender": "true",
+        "birthday": "06-12-2003",
+        "money": "15000000",
+        "image": "profile1.jpg"
+    }
+]
