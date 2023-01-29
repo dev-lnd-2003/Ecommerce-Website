@@ -34,8 +34,7 @@
 </head>
 
 <body ng-app="myApp">
-
-    <section class="header bg-light " ng-controller="headerCtrl">
+    <section class="header sticky-top z-99999 bg-white" ng-controller="headerCtrl">
         <header>
             <div ng-include="'layout/headertop.html'"></div>
 
@@ -58,21 +57,21 @@
                         </div>
                         <div class="col-sm-8 p-0 mt-3">
                             <div class="header-midle-search mx-auto">
-                                <input type="text" class="form-control" placeholder="Nhập Tên Sản Phẩm">
-                                <button class="btn-search">
+                                <input type="text" class="form-control" ng-model="$root.key" placeholder="Nhập Tên Sản Phẩm">
+                                <button ng-click="search()" class="btn-search">
                                     <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
                                 </button>
                             </div>
                         </div>
                         <div class="col-sm-2 mt-3 ">
-                            <div class="header-midle-user ">
+                            <div class="header-midle-user">
                                 <ul class="d-none d-lg-block navbar-nav" style="font-size: 24px;">
                                     <div class="row text-center">
                                         <li class="nav-item col-3 dropdown" ng-show="isUser">
                                             <a class="nav-link dropdown " id="dropdownUser" data-bs-toggle="dropdown" role="button">
                                                 <ion-icon name="person-outline" role="img" class="md hydrated" aria-label="person outline"></ion-icon>
                                             </a>
-                                            <ul class="dropdown-menu" style="border: 1px solid #f2f2f2" aria-labelledby="dropdownMenuLink">
+                                            <ul class="dropdown-menu" style="border: 1px solid #f2f2f2;" aria-labelledby="dropdownMenuLink">
                                                 <li>
                                                     <a class="dropdown-item d-flex align-items-center gap-2 mb-2 mt-2" style="font-weight: 600;" href="#!/login">
                                                         Đăng Nhập <ion-icon style="font-size: 24px;" name="log-in-outline"></ion-icon>
@@ -86,7 +85,7 @@
                                             </a>
                                             <ul class="dropdown-menu text-center" style="border: 1px solid #f2f2f2;" aria-labelledby="dropdownMenuLink">
                                                 <div class="info-customer">
-                                                    <img class="avatar-img mb-2 mt-2 " src="https://i.pinimg.com/564x/4a/3b/c4/4a3bc419410c35faafcfb830732a5bb6.jpg" alt="" srcset="">
+                                                    <img class="avatar-img mb-2 mt-2 " src="{{avatar}}" alt="" srcset="">
                                                     <h3 class="customer-name">{{fullname}}</h3>
                                                     <p>Tài Khoản Của Bạn</p>
                                                     <hr>
@@ -121,7 +120,7 @@
                                                             <a class="dropdown-item d-flex" href="">Xem Điều Khoản Dịch Vụ</a>
                                                         </li>
                                                         <li>
-                                                            <a class="dropdown-item d-flex" href="">Xem Chính Sách sQuyền Riêng Tư Của Bạn</a>
+                                                            <a class="dropdown-item d-flex" href="">Xem Chính Sách Quyền Riêng Tư Của Bạn</a>
                                                         </li>
                                                         <li>
                                                             <a class="dropdown-item d-flex align-items-center gap-2 mb-2" style="font-weight: 600;" ng-click="logout()">
@@ -168,8 +167,9 @@
 <script src="js/angular.min.js"></script>
 <script src="js/angular-route.js"></script>
 <script src="js/app/app.js"></script>
+<script src="js/service/productService.js"></script>
 <script src="js/controller/headerCtrl.js"></script>
 <script src="js/controller/loginCtrl.js"></script>
-
+<script src="js/controller/clothesCtrl.js"></script>
 
 </html>
