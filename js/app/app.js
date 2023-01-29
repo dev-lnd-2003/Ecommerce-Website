@@ -6,6 +6,9 @@ app.config(($routeProvider) => {
     }).when("/login", {
         templateUrl: "page/login.html",
         controller: "loginCtrl"
+    }).when("/clothes", {
+        templateUrl: "page/clothes.html",
+        controller: "clothesCtrl"
     }).otherwise({
         redirectTo: "/home"
     })
