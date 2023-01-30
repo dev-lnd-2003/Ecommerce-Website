@@ -13,1395 +13,263 @@
     <!-- 
         css bootstrap
      -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- 
-        font google
-     -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
     <!-- icons -->
     <link rel="stylesheet" href="icons/css/all.css">
-    <!-- 
-        css owlcarousel
-     -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <!-- 
-        custom css link
-     -->
-    <link rel="stylesheet" href="css/style.css">
+
+
 </head>
 
 <body>
-    <section class="header">
-        <header class="">
-            <div class="header-top ">
-                <div class="container">
+    <section>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light mb-2">
+            <div class="container">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="#">Action 1</a>
+                                <a class="dropdown-item" href="#">Action 2</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="d-flex my-2 my-lg-0">
+                        <input class="form-control me-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section>
+        <div class="container mb-2">
+            <div class="row">
+
+                <div class="col-sm-6  ">
+                    <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+                            <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+                            <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <img src="../images/banner-1.jpg" class="w-100 d-block" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../images/banner-2.jpg" class="w-100 d-block" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../images/banner-3.jpg" class="w-100 d-block" alt="Third slide">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="col-sm-6">
                     <div class="row">
-                        <div class="header-social-container mt-1">
-                            <nav class="navbar navbar-expand-lg navbar-light ">
-                                <div class="container">
-                                    <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-                                        aria-expanded="false" aria-label="Toggle navigation">
-                                        <span class="navbar-toggler-icon"></span>
-                                    </button>
-                                    <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#navbarNavDropdown1" aria-controls="navbarNavDropdown"
-                                        aria-expanded="false" aria-label="Toggle navigation">
-                                        <span class="navbar-toggler-icon"></span>
-                                    </button>
-
-                                    <div class="collapse navbar-collapse " id="navbarNavDropdown">
-                                        <ul class="navbar-nav ">
-                                            <div class="row">
-                                                <li class="nav-item col-3">
-                                                    <a class="nav-link" href="#"><i
-                                                            class="fa-brands fa-facebook"></i></a>
-                                                </li>
-                                                <li class="nav-item col-3">
-                                                    <a class="nav-link" href="#"><i
-                                                            class="fa-brands fa-twitter"></i></a>
-                                                </li>
-                                                <li class="nav-item col-3">
-                                                    <a class="nav-link" href="#"><i
-                                                            class="fa-brands fa-instagram"></i></a>
-                                                </li>
-                                                <li class="nav-item col-3">
-                                                    <a class="nav-link" href="#"><i
-                                                            class="fa-brands fa-linkedin"></i></a>
-                                                </li>
-                                            </div>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="collapse navbar-collapse col-sm-6" id="navbarNavDropdown">
-                                    <div class="header-alert-news text-center">
-                                        <p class="mt-3"> <b>Miễn Phí Vận Chuyển</b> Đơn Đặt Hàng Trong Tuần Này Từ
-                                            1.000.000 Trở Lên
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="collapse navbar-collapse col-sm-3" id="navbarNavDropdown">
-                                    <div class="header-top-actions mt-2">
-                                        <div class="row">
-                                            <div class="col-sm-6 mb-2">
-                                                <select name="" id="" class="form-select currency">
-                                                    <option value="">VND</option>
-                                                    <option value="">USD</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-sm-6 mb-2">
-                                                <select name="" id="" class="form-select language">
-                                                    <option value="">English</option>
-                                                    <option value="">Vietnamese</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </nav>
+                        <div class="text-center col-md-12 object-fit-cover">
+                            <img class="col-md-12 w-50" src="../images/banner-2.jpg" alt="" srcset="">
                         </div>
-                    </div>
-                </div>
-            </div>
-            <hr class="d-none d-sm-block ">
-            <div class="header-main mt-3 ">
-                <div class="container ">
-                    <div class="row ">
-                        <div class="col-sm-2 mt-2 ">
-                            <div class="brand text-center">
-                                <a href="" class="navbar-brand ">
-                                    <img src="images/logo/logo.svg" alt="" srcset="" width="130" height="50">
-                                </a>
-                            </div>
+                        <div class="text-center col-md-12">
+                            <img class="col-md-12 w-50" src="../images/banner-3.jpg" alt="" srcset="">
                         </div>
-                        <div class="col-sm-8 p-0 mt-3">
-                            <div class="header-midle-search">
-                                <input type="text" class="form-control" placeholder="Nhập Tên Sản Phẩm">
-                                <button class="btn-search">
-                                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="col-sm-2 mt-3 ">
-                            <div class="header-midle-user ">
-                                <ul class="navbar-nav" style="font-size: 24px;">
-                                    <div class="row text-center">
-                                        <li class="nav-item col-3 ">
-                                            <a class="nav-link " href="#"><i class="fa-solid fa-user"></i></a>
-                                        </li>
-                                        <li class="nav-item col-3">
-                                            <a class="nav-link" href="#"><i class="fa-solid fa-heart"></i></a>
-                                        </li>
-                                        <li class="nav-item col-3">
-                                            <a class="nav-link" href="#"><i class="fa-solid fa-bag-shopping"></i></a>
-                                        </li>
-                                    </div>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr class="d-none d-sm-block">
-            <div class="header-bottom">
-                <nav class="navbar navbar-expand-lg navbar-light ">
-                    <div class="container">
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown1">
-                            <ul class="navbar-nav mx-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Trang Chủ</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Loại Sản Phẩm</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Nam Giới</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Phụ Nữ</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Trang Sức</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Nước Hoa</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Blog</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#" style="color: #FF8F9E;">Khuyến Mãi</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
-    </section>
-    <section class="banner container mt-5">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="img">
-                        <img src="images/banner-1.jpg" class="d-block w-100 rounded-5" alt="...">
-                        <div class="banner-content">
-                            <p class="banner-subtitle">
-                                Sản Phẩm Thịnh Hành
-                            </p>
-                            <h2 class="banner-title">Thời Trang Nữ Mới Nhất</h2>
-                            <p class="banner-text">
-                                Bắt Đầu Với Giá
-                                <b>500.000</b>
-
-                            </p>
-                            <a href="" class="btn-banner">Shop Now</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="carousel-item">
-                    <div class="img">
-                        <img src="images/banner-2.jpg" class="d-block w-100 rounded-5" alt="...">
-                        <div class="banner-content">
-                            <p class="banner-subtitle">
-                                Sản Phẩm Thịnh Hành
-                            </p>
-                            <h2 class="banner-title">Thời Trang Nữ Mới Nhất</h2>
-                            <p class="banner-text">
-                                Bắt Đầu Với Giá
-                                <b>500.000</b>
-
-                            </p>
-                            <a href="" class="btn-banner">Shop Now</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="carousel-item">
-                    <div class="img">
-                        <img src="images/banner-3.jpg" class="d-block w-100 rounded-5" alt="...">
-                        <div class="banner-content">
-                            <p class="banner-subtitle">
-                                Sản Phẩm Thịnh Hành
-                            </p>
-                            <h2 class="banner-title">Thời Trang Nữ Mới Nhất</h2>
-                            <p class="banner-text">
-                                Bắt Đầu Với Giá
-                                <b>500.000</b>
-
-                            </p>
-
-                            <a href="" class="btn-banner">Shop Now</a>
-
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-    <section class="category container mt-5">
-        <div class="owl-carousel owl-theme">
-            <div class="item">
-                <div class="category-item d-flex ">
-                    <div class="category-img-box">
-                        <img class="mt-2 mb-2" src="images/icons/dress.svg" alt="" srcset="" width="30" height="30">
-                    </div>
-
-                    <div class="category-content-box mx-auto">
-                        <div class="category-content-flex d-flex justify-content-center">
-                            <h6 style="font-size: 14px; font-weight: 800;">Đầm & Áo Dài</h6>
-                            <h6 style="font-size: 14px; font-weight: 500;" class=" ms-5">(55)</h6>
-                        </div>
-                        <a href="">Xem Thêm</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="category-item d-flex mx-auto">
-                    <div class="category-img-box">
-                        <img class="" src="images/icons/coat.svg" alt="" srcset="" width="53px" height="58px">
-                    </div>
-
-                    <div class="category-content-box mx-auto">
-                        <div class="category-content-flex d-flex justify-content-center">
-                            <h6 style="font-size: 14px; font-weight: 800;">Áo Mùa Đông</h6>
-                            <h6 style="font-size: 14px; font-weight: 500;" class=" ms-5">(89)</h6>
-                        </div>
-                        <a href="">Xem Thêm</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="category-item d-flex mx-auto">
-                    <div class="category-img-box">
-                        <img class="" src="images/icons/glasses.svg" alt="" srcset="" width="53px" height="58px">
-                    </div>
-
-                    <div class="category-content-box mx-auto">
-                        <div class="category-content-flex d-flex justify-content-center">
-                            <h6 style="font-size: 14px; font-weight: 800;">Mắt Kính</h6>
-                            <h6 style="font-size: 14px; font-weight: 500;" class=" ms-5">(45)</h6>
-                        </div>
-                        <a href="">Xem Thêm</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="category-item d-flex ">
-                    <div class="category-img-box">
-                        <img class="" src="images/icons/shorts.svg" alt="" srcset="" width="53px" height="58px">
-                    </div>
-
-                    <div class="category-content-box mx-auto">
-                        <div class="category-content-flex d-flex justify-content-center">
-                            <h6 style="font-size: 14px; font-weight: 800;">Quần Short</h6>
-                            <h6 style="font-size: 14px; font-weight: 500;" class=" ms-5">(53)</h6>
-                        </div>
-                        <a href="">Xem Thêm</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="category-item d-flex ">
-                    <div class="category-img-box">
-                        <img class="" src="images/icons/tee.svg" alt="" srcset="" width="53px" height="58px">
-                    </div>
-
-                    <div class="category-content-box mx-auto">
-                        <div class="category-content-flex d-flex justify-content-center">
-                            <h6 style="font-size: 14px; font-weight: 800;">Áo Phông</h6>
-                            <h6 style="font-size: 14px; font-weight: 500;" class=" ms-5">(389)</h6>
-                        </div>
-                        <a href="">Xem Thêm</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="category-item d-flex ">
-                    <div class="category-img-box">
-                        <img class="" src="images/icons/jacket.svg" alt="" srcset="" width="53px" height="58px">
-                    </div>
-
-                    <div class="category-content-box mx-auto">
-                        <div class="category-content-flex d-flex justify-content-center">
-                            <h6 style="font-size: 14px; font-weight: 800;">Áo Khoác</h6>
-                            <h6 style="font-size: 14px; font-weight: 500;" class=" ms-5">(89)</h6>
-                        </div>
-                        <a href="">Xem Thêm</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="category-item d-flex ">
-                    <div class="category-img-box">
-                        <img class="" src="images/icons/watch.svg" alt="" srcset="" width="53px" height="58px">
-                    </div>
-
-                    <div class="category-content-box mx-auto">
-                        <div class="category-content-flex d-flex justify-content-center">
-                            <h6 style="font-size: 14px; font-weight: 800;">Đồng Hồ</h6>
-                            <h6 style="font-size: 14px; font-weight: 500;" class=" ms-5">(79)</h6>
-                        </div>
-                        <a href="">Xem Thêm</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="category-item d-flex ">
-                    <div class="category-img-box">
-                        <img class="" src="images/icons/hat.svg" alt="" srcset="" width="53px" height="58px">
-                    </div>
-
-                    <div class="category-content-box mx-auto">
-                        <div class="category-content-flex d-flex justify-content-center">
-                            <h6 style="font-size: 14px; font-weight: 800;">Mũ</h6>
-                            <h6 style="font-size: 14px; font-weight: 500;" class=" ms-5">(58)</h6>
-                        </div>
-                        <a href="">Xem Thêm</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="product-container container mt-5">
-        <div class="row">
-            <!-- sidebar -->
-            <div class="col-sm-3">
+
+    <section>
+        <div class="container mb-2">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img class="card-img-top" src="../images/products/jacket-1.jpg" alt="Title">
+                        <div class="card-body">
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text">Text</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img class="card-img-top" src="../images/products/jacket-2.jpg" alt="Title">
+                        <div class="card-body">
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text">Text</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img class="card-img-top" src="../images/products/jacket-3.jpg" alt="Title">
+                        <div class="card-body">
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text">Text</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img class="card-img-top" src="../images/products/jacket-4.jpg" alt="Title">
+                        <div class="card-body">
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text">Text</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid mb-2 ">
+            <div class="row">
+                <img class="col-md-12" height="700" src="../images/banner-clothes/1.jpg" alt="" srcset="">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mb-2">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="../images/products/clothes-1.jpg" alt="Title">
+                        <div class="card-body">
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text">Text</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="../images/products/clothes-2.jpg" alt="Title">
+                        <div class="card-body">
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text">Text</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="../images/products/clothes-3.jpg" alt="Title">
+                        <div class="card-body">
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text">Text</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <footer>
+            <div class="container">
                 <div class="row">
-                    <div class="sidebar-top">
-                        <ul class="list-group list-group-light">
-                            <li class="list-group-item border-0 title">
-                                Sản Phẩm
+                    <div class="col-sm-4">
+                        <ul class="list-group list-group-light ">
+                            <li class="list-group-item border-0">
+                                <h2 class="footer-nav-title">
+                                    Công Ty Của Chúng Tôi
+                                </h2>
                             </li>
-                            <li class="list-group-item border-0 ">
-                                <div data-bs-toggle="collapse" data-bs-target="#clothes" class="img">
-                                    <div class="d-flex" style="gap: 10px;">
-                                        <img class="mt-1 mb-1" src="images/icons/dress.svg" width="20" height="20"
-                                            alt="" srcset="">
-                                        <span>Quần Áo</span>
-                                        <div class="ms-auto">
-                                            <span>+</span>
-                                        </div>
-                                    </div>
-
-                                    <div id="clothes" class="collapse">
-                                        <hr>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Sơ Mi</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Quần Short</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Áo Khoác</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Đầm & Áo Dài</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                    </div>
-                                </div>
+                            <li class="list-group-item border-0">
+                                <a class="footer-nav-link" href="">Giới Thiệu</a>
                             </li>
-                            <li class="list-group-item border-0 ">
-                                <div data-bs-toggle="collapse" data-bs-target="#shoes" class="img">
-                                    <div class="d-flex" style="gap: 10px;">
-                                        <img class="mt-1 mb-1" src="images/icons/shoes.svg" width="20" height="20"
-                                            alt="" srcset="">
-                                        <span>Giày Dép</span>
-                                        <div class="ms-auto">
-                                            <span>+</span>
-                                        </div>
-                                    </div>
+                            <li class="list-group-item border-0">
 
-                                    <div id="shoes" class="collapse">
-                                        <hr>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Thể Thao</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Truyền Thống</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Hiện Đại</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Giày Bảo Hộ</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <a class="footer-nav-link" href="">Chính Sách</a>
                             </li>
-                            <li class="list-group-item border-0 ">
-                                <div data-bs-toggle="collapse" data-bs-target="#jewelry" class="img">
-                                    <div class="d-flex" style="gap: 10px;">
-                                        <img class="mt-1 mb-1" src="images/icons/jewelry.svg" width="20" height="20"
-                                            alt="" srcset="">
-                                        <span>Trang Sức</span>
-                                        <div class="ms-auto">
-                                            <span>+</span>
-                                        </div>
-                                    </div>
-
-                                    <div id="jewelry" class="collapse">
-                                        <hr>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Bông Tai</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Nhẫn Cặp</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Lắc Tay</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Dây Chuyền</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                    </div>
-                                </div>
+                            <li class="list-group-item border-0">
+                                <a class="footer-nav-link" href="">Các Điều Khoản</a>
                             </li>
-                            <li class="list-group-item border-0 ">
-                                <div data-bs-toggle="collapse" data-bs-target="#perfume" class="img">
-                                    <div class="d-flex" style="gap: 10px;">
-                                        <img class="mt-1 mb-1" src="images/icons/perfume.svg" width="20" height="20"
-                                            alt="" srcset="">
-                                        <span>Nước Hoa</span>
-                                        <div class="ms-auto">
-                                            <span>+</span>
-                                        </div>
-                                    </div>
-
-                                    <div id="perfume" class="collapse">
-                                        <hr>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Quyến Rũ</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Nhẹ Nhàng</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Hàng Hiệu</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Dạ Hội</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                    </div>
-                                </div>
+                            <li class="list-group-item border-0">
+                                <a class="footer-nav-link" href="">Giao Hàng</a>
                             </li>
-                            <li class="list-group-item border-0 ">
-                                <div data-bs-toggle="collapse" data-bs-target="#cosmetics" class="img">
-                                    <div class="d-flex" style="gap: 10px;">
-                                        <img class="mt-1 mb-1" src="images/icons/cosmetics.svg" width="20" height="20"
-                                            alt="" srcset="">
-                                        <span>Quần Áo</span>
-                                        <div class="ms-auto">
-                                            <span>+</span>
-                                        </div>
-                                    </div>
-
-                                    <div id="cosmetics" class="collapse">
-                                        <hr>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Sơ Mi</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Quần Short</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Áo Khoác</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Đầm & Áo Dài</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item border-0 ">
-                                <div data-bs-toggle="collapse" data-bs-target="#bag" class="img">
-                                    <div class="d-flex" style="gap: 10px;">
-                                        <img class="mt-1 mb-1" src="images/icons/bag.svg" width="20" height="20" alt=""
-                                            srcset="">
-                                        <span>Túi Xách</span>
-                                        <div class="ms-auto">
-                                            <span>+</span>
-                                        </div>
-                                    </div>
-
-                                    <div id="bag" class="collapse">
-                                        <hr>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Sơ Mi</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Quần Short</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Áo Khoác</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                        <div class="product d-flex">
-                                            <a class="product-name" href="">Đầm & Áo Dài</a>
-                                            <span class="stocks ms-auto">36</span>
-                                        </div>
-                                    </div>
-                                </div>
+                            <li class="list-group-item border-0">
+                                <a class="footer-nav-link" href="">An Toàn Giao Dịch</a>
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="sidebar-bottom">
-                        <ul class="list-group list-group-light">
-                            <li class="list-group-item border-0 title">Best Sellers</li>
-                            <li class="list-group-item border-0 ">
-                                <div class="d-flex" style="gap: 10px;">
-                                    <img src="images/products/1.jpg" alt="" width="75" height="70">
-                                    <div class="info-product ">
-                                        <p class="product-name">
-                                            <a href="">Giày Vải Cho Bé</a>
-                                        </p>
-                                        <div class="product-rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                        <div class="price-box d-flex">
-                                            <del>120.000 VNĐ</del>
-                                            <p class="price">90.000 VNĐ</p>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="col-sm-4">
+                        <ul class="list-group list-group-light ">
+                            <li class="list-group-item border-0">
+                                <h2 class="footer-nav-title">
+                                    Dịch Vụ Của Chúng Tôi
+                                </h2>
                             </li>
-                            <li class="list-group-item border-0 ">
-                                <div class="d-flex" style="gap: 10px;">
-                                    <img src="images/products/2.jpg" alt="" width="75" height="70">
-                                    <div class="info-product ">
-                                        <p class="product-name">
-                                            <a href="">Hoddies Nam</a>
-                                        </p>
-                                        <div class="product-rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                        <div class="price-box d-flex">
-                                            <del>120.000 VNĐ</del>
-                                            <p class="price">90.000 VNĐ</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <li class="list-group-item border-0">
+                                <a class="footer-nav-link" href="">Giảm Giá</a>
                             </li>
-                            <li class="list-group-item border-0 ">
-                                <div class="d-flex" style="gap: 10px;">
-                                    <img src="images/products/3.jpg" alt="" width="75" height="70">
-                                    <div class="info-product ">
-                                        <p class="product-name">
-                                            <a href="">Áo Nữ</a>
-                                        </p>
-                                        <div class="product-rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                        <div class="price-box d-flex">
-                                            <del>120.000 VNĐ</del>
-                                            <p class="price">90.000 VNĐ</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <li class="list-group-item border-0">
+
+                                <a class="footer-nav-link" href="">Sản Phẩm Mới</a>
                             </li>
-                            <li class="list-group-item border-0 ">
-                                <div class="d-flex" style="gap: 10px;">
-                                    <img src="images/products/4.jpg" alt="" width="75" height="70">
-                                    <div class="info-product ">
-                                        <p class="product-name">
-                                            <a href="">Mũ Nam</a>
-                                        </p>
-                                        <div class="product-rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                        <div class="price-box d-flex">
-                                            <del>120.000 VNĐ</del>
-                                            <p class="price">90.000 VNĐ</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <li class="list-group-item border-0">
+                                <a class="footer-nav-link" href="">Hàng Bán Chạy Nhất</a>
+                            </li>
+                            <li class="list-group-item border-0">
+                                <a class="footer-nav-link" href="">Liên Hệ Với Chúng Tôi</a>
+                            </li>
+                            <li class="list-group-item border-0">
+                                <a class="footer-nav-link" href="">Sitemap</a>
                             </li>
                         </ul>
                     </div>
 
-                </div>
-            </div>
-            <!-- sidebar -->
-            <!-- container-product -->
-            <div class="col-sm-9">
-                <div class="product-show">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="product-showcase">
-                                <h2>Hàng Mới</h2>
-                                <div class="owl-carousel owl-theme" id="product-new">
-                                    <div class="item">
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/clothes-1.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name">
-                                                        Áo Thun Ngắn Tay
-                                                    </h4>
-                                                </a>
-                                                <a class=" text-decoration-none product-category" href="">
-                                                    Quần & Áo
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        50.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        80.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/clothes-2.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name ">
-                                                        Áo Hồng Dịu Dàng
-                                                    </h4>
-                                                </a>
-                                                <a class=" text-decoration-none product-category" href="">
-                                                    Quần & Áo
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        80.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        100.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/clothes-3.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name ">
-                                                        Váy Đen Huyền Ảo
-                                                    </h4>
-                                                </a>
-                                                <a class="text-decoration-none product-category" href="">
-                                                    Quần & Áo
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        70.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        90.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/shirt-1.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none " href="">
-                                                    <h4 class="product-name ">
-                                                        Áo Sơ Mi Bông
-                                                    </h4>
-                                                </a>
-                                                <a class=" text-decoration-none product-category" href="">
-                                                    Thời Trang Nam Giới
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        90.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        180.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/jacket-5.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name">
-                                                        Áo Khoác Nam Full Body
-                                                    </h4>
-                                                </a>
-                                                <a class="mt-2 text-decoration-none product-category" href="">
-                                                    Thời Trang Mùa Đông
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        350.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        400.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/jacket-1.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name">
-                                                        Áo Khoác Da Nam
-                                                    </h4>
-                                                </a>
-                                                <a class="mt-2 text-decoration-none product-category" href="">
-                                                    Thời Trang Mùa Đông
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        500.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        550.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/jacket-3.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name">
-                                                        Áo khoác da nam
-                                                    </h4>
-                                                </a>
-                                                <a class="mt-2 text-decoration-none product-category" href="">
-                                                    Quần & Áo
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        250.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        300.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/shorts-1.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name">
-                                                        Quần Đùi Terry Pháp
-                                                    </h4>
-                                                </a>
-                                                <a class="mt-2 text-decoration-none product-category" href="">
-                                                    Quần & Áo
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        80.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        100.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="product-showcase">
-                                <h2>Xu Hướng Mua Sắm</h2>
-                                <div class="owl-carousel owl-theme" id="product-trending">
-                                    <div class="item">
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/sports-1.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name ">
-                                                        Giày Thể Thao - Trắng
-                                                    </h4>
-                                                </a>
-                                                <a class=" text-decoration-none product-category" href="">
-                                                    Thể Thao
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        850.00 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        950.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/sports-2.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name ">
-                                                        Giày Nike - Đen
-                                                    </h4>
-                                                </a>
-                                                <a class=" text-decoration-none product-category" href="">
-                                                    Thể Thao
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        880.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        990.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/party-wear-1.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name">
-                                                        Giày Dạ Hội - Sang Trọng
-                                                    </h4>
-                                                </a>
-                                                <a class="text-decoration-none product-category" href="">
-                                                    Dạ Hội
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        770.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        890.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/sports-3.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none " href="">
-                                                    <h4 class="product-name">
-                                                        Giày Thể Thao Nike - Nữ
-                                                    </h4>
-                                                </a>
-                                                <a class=" text-decoration-none product-category" href="">
-                                                    Thể Thao
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        90.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        180.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/sports-6.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name ">
-                                                        Giày Leo Núi - Trắng
-                                                    </h4>
-                                                </a>
-                                                <a class="text-decoration-none product-category" href="">
-                                                    Thể Thao
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        350.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        400.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/shoe-3.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name ">
-                                                        Giày Boot Nam - Da Bò - Đen
-                                                    </h4>
-                                                </a>
-                                                <a class=" text-decoration-none product-category" href="">
-                                                    Boots
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        500.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        550.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/shoe-1.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name ">
-                                                        Giày Truyền Thống - Nâu Đen
-                                                    </h4>
-                                                </a>
-                                                <a class=" text-decoration-none product-category" href="">
-                                                    Truyền Thống
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        250.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        300.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/shoe-2.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name ">
-                                                        Giày Vải - Cà Phê Sữa
-                                                    </h4>
-                                                </a>
-                                                <a class="text-decoration-none product-category" href="">
-                                                    Vải
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        880.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        990.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="product-showcase">
-                                <h2>Top Đánh Giá</h2>
-                                <div class="owl-carousel owl-theme" id="product-rated">
-                                    <div class="item">
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/sports-1.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name">
-                                                        Giày Thể Thao - Trắng
-                                                    </h4>
-                                                </a>
-                                                <a class=" text-decoration-none product-category" href="">
-                                                    Thể Thao
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        850.00 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        950.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/sports-2.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name ">
-                                                        Giày Nike - Đen
-                                                    </h4>
-                                                </a>
-                                                <a class=" text-decoration-none product-category" href="">
-                                                    Thể Thao
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        880.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        990.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/party-wear-1.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name ">
-                                                        Giày Dạ Hội - Sang Trọng
-                                                    </h4>
-                                                </a>
-                                                <a class="text-decoration-none product-category" href="">
-                                                    Dạ Hội
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        770.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        890.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/sports-3.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none " href="">
-                                                    <h4 class="product-name">
-                                                        Giày Thể Thao Nike - Nữ
-                                                    </h4>
-                                                </a>
-                                                <a class=" text-decoration-none product-category" href="">
-                                                    Thể Thao
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        90.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        180.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/sports-6.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name">
-                                                        Giày Leo Núi - Trắng
-                                                    </h4>
-                                                </a>
-                                                <a class="text-decoration-none product-category" href="">
-                                                    Thể Thao
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        350.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        400.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/shoe-3.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name">
-                                                        Giày Boot Nam - Da Bò - Đen
-                                                    </h4>
-                                                </a>
-                                                <a class=" text-decoration-none product-category" href="">
-                                                    Boots
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        500.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        550.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/shoe-1.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name ">
-                                                        Giày Truyền Thống - Nâu Đen
-                                                    </h4>
-                                                </a>
-                                                <a class=" text-decoration-none product-category" href="">
-                                                    Truyền Thống
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        250.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        300.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item d-flex">
-                                            <div class="product-img-box">
-                                                <img class="" src="images/products/shoe-2.jpg" alt="" srcset=""
-                                                    width="70" height="70">
-                                            </div>
-                                            <div class="product-info">
-                                                <a class="text-decoration-none" href="">
-                                                    <h4 class="product-name">
-                                                        Giày Vải - Cà Phê Sữa
-                                                    </h4>
-                                                </a>
-                                                <a class="text-decoration-none product-category" href="">
-                                                    Vải
-                                                </a>
-                                                <div class="price-box d-flex mt-2">
-                                                    <p class="price">
-                                                        880.000 VNĐ
-                                                    </p>
-                                                    <del>
-                                                        990.000 VNĐ
-                                                    </del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-sm-4">
+                        <ul class="list-group list-group-light ">
+                            <li class="list-group-item border-0">
+                                <h2 class="footer-nav-title">
+                                    Thông Tin Liên Hệ
+                                </h2>
+                            </li>
+                            <li class="list-group-item border-0" style="color: #787878; font-size: 18px;">
+                                <ion-icon name="location-outline" role="img" class="md hydrated" aria-label="location outline"></ion-icon>
+                                123456789A,Phú Lợi,Xã Tân Phú Trung, Huyện Củ Chi, TP.Hồ Chí Minh.
+                            </li>
+                            <li class="list-group-item border-0" style="color: #787878; font-size: 18px;">
+                                <ion-icon name="call-outline" role="img" class="md hydrated" aria-label="call outline"></ion-icon>
+                                <a class="footer-nav-link" href=""> ĐT: 028 39951703 - Fax: 028 3995 1702</a>
+                            </li>
+                            <li class="list-group-item border-0" style="color: #787878;font-size: 18px;">
+                                <ion-icon name="mail-outline" role="img" class="md hydrated" aria-label="mail outline"></ion-icon>
+                                <a class="footer-nav-link" href="">Mail@Gmail.com</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
+        </footer>
     </section>
 </body>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/jquery-3.6.3.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script>
-    $('#product-new').owlCarousel({
-
-        margin: 10,
-        nav: false,
-        dots: true,
-
-        responsive: {
-            0: {
-                items: 1
-
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
-            },
-            1200: {
-                items: 1,
-
-            }
-        }
-    })
-</script>
-<script>
-    $('#product-trending').owlCarousel({
-
-        margin: 10,
-        nav: false,
-        dots: true,
-
-        responsive: {
-            0: {
-                items: 1
-
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
-            },
-            1200: {
-                items: 1,
-
-            }
-        }
-    })
-</script>
-<script>
-    $('#product-rated').owlCarousel({
-
-        margin: 10,
-        nav: false,
-        dots: true,
-
-        responsive: {
-            0: {
-                items: 1
-
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
-            },
-            1200: {
-                items: 1,
-
-            }
-        }
-    })
-</script>
-<script>
-    $('.owl-carousel').owlCarousel({
-
-        margin: 10,
-        nav: false,
-        dots: false,
-
-        responsive: {
-            0: {
-                items: 1
-
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
-            },
-            1200: {
-                items: 4,
-
-            }
-        }
-    })
-
-</script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src=""></script>
 
 </html>

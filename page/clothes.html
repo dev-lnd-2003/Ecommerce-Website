@@ -20,31 +20,12 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="img">
-                        <img src="https://img.freepik.com/free-photo/young-attractive-woman-saying-yes-showing-thumbs-up-sign-approval-smiling-confident-satisfied_1258-124528.jpg?w=1800&t=st=1674919428~exp=1674920028~hmac=1bb0bcab369e188dbd5b0f92acff8b6950c1a95b87a76fa200fec6d878e52182"
-                            class="d-block rounded-5" width="1296" height="590" alt="...">
+                        <img src="https://img.freepik.com/premium-photo/stylish-man-sunglasses-puffing-vapor-black_136403-12994.jpg?w=1800" class="d-block rounded-5" width="1296" height="600" alt="...">
                         <div class="banner-content">
                             <p class="banner-subtitle">
-                                Áo Thun Nữ
+                                Áo Thun Nam
                             </p>
-                            <h2 class="banner-title ">Thời Trang Áo Thun Nữ Mới Nhất</h2>
-                            <p class="banner-text">
-                                Chỉ Với Giá
-                                <b>500</b>.000 <sup>đ</sup>
-
-                            </p>
-                            <a href="" class="btn-banner">Shop Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="img">
-                        <img src="https://img.freepik.com/free-photo/glamour-girl-holding-shopping-bags-pucker-lips-looking-coy-standing-against-pink-background_1258-123331.jpg?w=1800&t=st=1674919750~exp=1674920350~hmac=007c98f7ace4cdae0f945035ce27f31b72a5c3c3e18b2bde10ca0220c429ce2d"
-                            class="d-block rounded-5" width="1296" height="590" alt="...">
-                        <div class="banner-content">
-                            <p class="banner-subtitle">
-                                Áo Thun Nữ
-                            </p>
-                            <h2 class="banner-title ">Thời Trang Áo Thun Nữ Mới Nhất</h2>
+                            <h2 class="banner-title ">Thời Trang Áo Nam Mới Nhất</h2>
                             <p class="banner-text">
                                 Chỉ Với Giá
                                 <b>500</b>.000 <sup>đ</sup>
@@ -57,13 +38,30 @@
                 </div>
                 <div class="carousel-item ">
                     <div class="img">
-                        <img src="https://img.freepik.com/free-photo/excited-smiling-woman-stylish-clothes-pointing-fingers-down-looking-happy-amused-checking-out_1258-124527.jpg?w=1800&t=st=1674919716~exp=1674920316~hmac=f8fdba8cec5f250edf72ac6d4a6968f9a780843f8045a8362dfae52d18c440fb"
-                            class="d-block rounded-5 " width="1296" height="590" style="object-position: right;" alt="...">
+                        <img src="https://img.freepik.com/premium-photo/portrait-man-widebrimmed-hat-sunglasses-looking-camera-black_136403-13065.jpg?w=1800" class="d-block rounded-5" width="1296" height="600" alt="...">
                         <div class="banner-content">
                             <p class="banner-subtitle">
-                                Áo Thun Nữ
+                                Áo Thun Nam
                             </p>
-                            <h2 class="banner-title ">Thời Trang Áo Thun Nữ Mới Nhất</h2>
+                            <h2 class="banner-title ">Thời Trang Áo Nam Mới Nhất</h2>
+                            <p class="banner-text">
+                                Chỉ Với Giá
+                                <b>500</b>.000 <sup>đ</sup>
+
+                            </p>
+                            <a href="" class="btn-banner">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item ">
+                    <div class="img">
+                        <img src="https://img.freepik.com/premium-photo/stylish-man-sunglasses-puffing-vapor-black_136403-12994.jpg?w=1800" class="d-block rounded-5 " width="1296" height="600" style="object-position: right;" alt="...">
+                        <div class="banner-content">
+                            <p class="banner-subtitle">
+                                Áo Thun Nam
+                            </p>
+                            <h2 class="banner-title ">Thời Trang Áo Nam Mới Nhất</h2>
                             <p class="banner-text">
                                 Chỉ Với Giá
                                 <b>500</b>.000 <sup>đ</sup>
@@ -95,8 +93,9 @@
         <div class="container">
             <div class="row">
                 <div class="filter-group d-flex align-items-center gap-1 ">
-                    <select name="" id="" class="form-select ">
-                        <option selected>Thương Hiệu</option>
+                    <select name="" id="" class="form-select " ng-model="brand">
+                        <option value="" selected>Thương Hiệu</option>
+                        <option value="{{brand}}" ng-repeat="brand in uniqueBrands ">{{brand}}</option>
                     </select>
                     <select name="" id="" class="form-select">
                         <option selected>Size</option>
@@ -126,17 +125,17 @@
 
         </div>
     </section>
-    <section class="show-product" style="margin-bottom: 50000px;">
+    <section class="show-product">
         <div class="container">
             <div class="product-show">
                 <div class="product-new mt-5">
                     <div class="row">
-                        <div class="col-sm-3 col-md-12 col-lg-6 col-xxl-3" ng-repeat="p in filteredProducts | limitTo : 24 : 0 ">
+                        <div class="col-sm-3 col-md-12 col-lg-6 col-xxl-3" ng-repeat="p in filteredProducts | limitTo : 20 : begin">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="show-product-banner mx-auto">
-                                        <img src="{{p.images_basic_0}}" width="220" class="product-img default" alt="">
-                                        <img src="{{p.images_basic_1}}" width="220" class="product-img hover" alt="">
+                                        <img src="{{p.images_basic_0}}" style="border-radius: 10px;" class="product-img default" alt="">
+                                        <img src="{{p.images_basic_1}}" style="border-radius: 10px;" class="product-img hover" alt="">
                                         <p class="show-product-badge">Hot</p>
                                         <div class="show-product-actions">
                                             <button href="" class="btn-action">
@@ -191,6 +190,28 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section id="pagination-product">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a ng-click="prev()" class="page-link " aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                <li class="page-item " ng-repeat="i in [].constructor(pageCount) track by $index">
+                    <a class="page-link " ng-class="{'active': currentPage === $index + 1}" ng-click="goToPage($index+1)">{{$index+1}}</a>
+                </li>
+
+                <li class="page-item">
+                    <a ng-click="next()" class="page-link" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </section>
 </body>
 

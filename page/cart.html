@@ -1,0 +1,131 @@
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        .cart {
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+
+        .card-body {
+            padding: 10px !important;
+        }
+
+        .card {
+            border: 1px solid #f2f2f9;
+            margin-right: 40px;
+            margin-left: 10px;
+        }
+
+        table {
+
+            padding: 10px;
+        }
+
+        table .product-name {
+            margin-left: 20px;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            max-width: 200px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .cart .total-price {
+            color: #1d1d1d;
+            font-size: 20px;
+        }
+
+        .cart .btn-delete {
+
+            text-decoration: none;
+            color: rgba(50, 50, 85, 0.915);
+            font-weight: 600;
+        }
+
+        .cart .btn-delete:hover {
+            color: #FF8F9E;
+        }
+
+        .cart .btn-buy {
+            color: #1d1d1d;
+            border: 1px solid #f2f2f9;
+            background: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.5s ease;
+            border-radius: 5px;
+        }
+
+        .cart .btn-buy:hover {
+            color: #f2f2f9;
+            background-color: #1d1d1d;
+        }
+    </style>
+</head>
+
+<body class="bg-light ">
+
+    <section class="container cart">
+        <h3 class="mb-2 text-center">Giỏ Hàng</h3>
+        <h6 class="mb-5 text-center">Chúc Bạn Mua Sắm Vui Vẻ</h6>
+        <div class="row ">
+            <div class="card">
+                <div class="card-body ">
+                    <div class="table-responsive">
+                        <table class="table table-borderless">
+                            <thead>
+                                <tr class="text-center ">
+                                    <th>STT</th>
+                                    <th>Sản Phẩm</th>
+                                    <th>Tên Sản Phẩm</th>
+                                    <th>Đơn Giá</th>
+                                    <th>Số Lượng</th>
+                                    <th>Thao Tác</th>
+                                    <th>Chọn</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="" style=" vertical-align: middle;" ng-repeat="items in cartItems">
+                                    <td style="font-size: 16px;" class="text-center">{{$index+1}}</td>
+                                    <td class="text-center"><img src="{{items.product.images_small_0}}" alt="" srcset="">
+                                    </td>
+                                    <td class="product-name">
+                                        {{items.product.product_name}}
+                                    </td>
+                                    <td>{{items.product.price | currency : "" : 0}} <sup>đ</sup></td>
+                                    <td class="text-center">{{items.quantity}}
+                                    </td>
+                                    <td class="text-center"><a class="btn-delete" ng-click="removeProduct($index)" href="">Xoá</a></td>
+                                    <td>
+                                        <div class="text-center">
+                                            <input ng-model="choose" ng-checked="all" class="form-check-input text-center" type="checkbox" value="" id="flexCheckDefault">
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <div class="content-order d-flex align-items-center">
+                        <h3 class="total-price">Tổng Tiền : {{totalPrice | currency : "" : 0}}</h3>
+                        <button class="ms-auto btn-buy">
+                            Thanh Toán
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

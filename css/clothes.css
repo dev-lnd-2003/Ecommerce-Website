@@ -254,27 +254,29 @@ header .header-bottom .menu-social-container ul li .menu-bottom-social {
 }
 
 .banner .carousel-inner .carousel-item .banner-content {
-    /* background-color: hsl(0deg 0% 100% / 80%); */
+    background-color: rgba(255, 255, 255, 0.232);
     position: absolute;
-    top: 150px;
-    left: 700px;
+    top: 170px;
+    left: 350px;
     padding: 20px 35px;
     font-weight: 500;
-    line-height: 1;
+
     border-radius: 10px;
-    max-width: 560;
+    max-width: 550;
+    text-align: center;
 }
 
 .banner .carousel-inner .carousel-item .banner-content .banner-subtitle {
     font-size: 29.25px;
-    color: #fff0f0;
+    color: #ffffff;
     font-weight: 700;
     margin-bottom: 10px;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
+
 }
 
 .banner .carousel-inner .carousel-item .banner-content .banner-title {
-    font-size: 46px;
+    font-size: 35px;
     text-transform: uppercase;
     line-height: 1.2;
     margin-bottom: 10px;
@@ -524,6 +526,7 @@ header .header-bottom .menu-social-container ul li .menu-bottom-social {
 .show-product .product-show .product-new .card .card-body .price-box del {
     color: hsl(0deg 0% 47%);
 }
+
 
 footer {
 

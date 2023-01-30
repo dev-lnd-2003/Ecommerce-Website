@@ -1,8 +1,8 @@
-app.service("productService", function ($http, $filter) {
+app.service("productService", function ($http, $filter, $route) {
 
 
     this.getClothesData = function () {
-        return $http.get("../../db/clothes.json").then(function (reponse) {
+        return $http.get("./../../db/clothes.json").then(function (reponse) {
             return reponse.data;
         })
     }
@@ -12,6 +12,7 @@ app.service("productService", function ($http, $filter) {
     }
 
     let cartItems = []
+
     this.addToCart = function (product, user) {
         let exists = false;
         for (let i = 0; i < cartItems.length; i++) {
@@ -21,15 +22,22 @@ app.service("productService", function ($http, $filter) {
                 break;
             }
         }
+
+
         if (!exists) {
             cartItems.push({
-                product: product,
-                user: user,
-                quantity: 1
+                product,
+                user,
+                quantity: 1,
             })
         }
         // Lưu giỏ hàng vào localStorage
         localStorage.setItem('cart', JSON.stringify(cartItems));
-        console.log(cartItems)
+    }
+
+    this.removeProduct = function (index) {
+        cartItems.splice(index, 1)
+        localStorage.setItem('cart', JSON.stringify(cartItems))
+
     }
 })

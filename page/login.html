@@ -1,9 +1,8 @@
 <head>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="../css/style.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
 
     <style>
         .login {
@@ -63,6 +62,17 @@
             color: rgba(235, 178, 191, 0.6);
         }
 
+        .login .btn-register {
+            color: hsl(0 -1% 27% / 1);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .login .btn-register:hover {
+            color: #FF8F9E;
+            cursor: pointer;
+        }
+
         .login .fa-brands {
             padding: 10px;
         }
@@ -84,6 +94,11 @@
             font-size: 2.5rem;
             color: rgba(0, 149, 255, 0.601);
         }
+
+        .modal .form-label {
+            color: hsl(0deg 0% 47%);
+            font-weight: 600;
+        }
     </style>
 </head>
 <section class="login ">
@@ -96,29 +111,84 @@
             </div>
             <div class="col-sm-6  col-lg-5 text-center py-5 mt-5">
                 <h1 class="animate__heartBeat">Welcome Back</h1>
-                <form id="login">
+                <form id="login" name="">
                     <div class="form-group pt-5 ">
                         <div class="py-3 ">
-                            <input ng-model="username" type="text" class="input form-control mx-auto"
-                                placeholder="Username">
+                            <input name="user" ng-model="username" type="text" class="input form-control mx-auto" placeholder="Username" required>
+                            <!-- <div ng-if="submitted && frmLogin.user.$invalid">Vui Lòng Nhập Họ Tên</div> -->
+
                         </div>
                         <div class="py-3  ">
-                            <input ng-model="password" type="password" class="input form-control mx-auto"
-                                placeholder="Password">
+                            <input ng-model="password" type="password" class="input form-control mx-auto" placeholder="Password">
                         </div>
-                        <div class=" py-3 ">
+                        <div class=" mb-3 mt-3 ">
                             <button ng-click="login()" class="btn">Sign In</button>
+                            <div class="mt-3">
+                                <a class="btn-register" data-bs-toggle="modal" data-bs-target="#exampleModal">Register</a>
+                            </div>
                         </div>
-                        <!-- <div class=" py-3 ">
-                            <button ng-click="register()" class="btn">Sign Up</button>
-                        </div> -->
+
                     </div>
                 </form>
-                <p class="mt-3">Or Login With</p>
+                <hr>
+                <p style="font-weight: 500;">Or Login With</p>
                 <span><a href=""><i class="fa-brands fa-facebook"></i></a></span>
                 <span><a href=""><i class="fa-brands fa-google"></i></a></span>
                 <span><a href=""><i class="fa-brands fa-twitter"></i></a></i></span>
             </div>
         </div>
     </div>
+    <section>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header d-block p-5">
+                        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Register</h1>
+                        <h3>{{a}}</h3>
+
+                    </div>
+                    <div class="modal-body p-5">
+                        <form name="frmRegister">
+                            <div class="form-group mb-3">
+                                <label for="" class="form-label">Full Name</label>
+                                <input name="fullname" ng-model="fullnameR" type="text" class="form-control" placeholder="" required>
+                                <!-- <div style="color: red;" ng-if="submitted && frmRegister.fullname.$invalid">Vui Lòng Nhập Họ Tên</div> -->
+                                <div style="color: red;" ng-if="submitted && frmRegister.fullname.$invalid">{{message}}</div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="" class="form-label">Username</label>
+                                <input name="username" ng-model="usernameR" type="text" class="form-control" placeholder="" required>
+                                <!-- <div class="mt-2" style="color: red;" ng-if="submitted && frmRegister.username.$invalid">Username Không Bỏ Trống</div> -->
+                                <div class="mt-2" style="color: red;" ng-if="submitted && frmRegister.username.$invalid">{{message}}</div>
+
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="" class="form-label">Email</label>
+                                <input ng-model="emailR" type="email" class="form-control" placeholder="">
+
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="" class="form-label">Password</label>
+                                <input name="password" ng-model="passwordR" type="password" class="form-control" placeholder="" required>
+                                <!-- <div class="mt-2" style="color: red;" ng-if="submitted && frmRegister.password.$invalid">Password Không Bỏ Trống</div> -->
+                                <div class="mt-2" style="color: red;" ng-if="submitted && frmRegister.password.$invalid">{{message}}</div>
+
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="" class="form-label">Repeat Password</label>
+                                <input class="mt-2 form-control" ng-model="passwordRP" type="password" class="form-control" placeholder="">
+                            </div>
+                            <div class="mt-3">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" ng-click="register()" class="btn btn-primary">Save</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
 </section>

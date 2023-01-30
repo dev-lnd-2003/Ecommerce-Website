@@ -4,7 +4,7 @@ $('#product-new').owlCarousel({
 
     margin: 10,
     nav: false,
-    dots: true,
+    dots: false,
 
     responsive: {
         0: {
@@ -29,7 +29,7 @@ $('#product-trending').owlCarousel({
 
     margin: 10,
     nav: false,
-    dots: true,
+    dots: false,
 
     responsive: {
         0: {
@@ -53,7 +53,7 @@ $('#product-rated').owlCarousel({
 
     margin: 10,
     nav: false,
-    dots: true,
+    dots: false,
 
     responsive: {
         0: {

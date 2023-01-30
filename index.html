@@ -34,7 +34,7 @@
 </head>
 
 <body ng-app="myApp">
-    <section class="header sticky-top z-99999 bg-white" ng-controller="headerCtrl">
+    <section class=" z-99999 bg-white" ng-controller="headerCtrl">
         <header>
             <div ng-include="'layout/headertop.html'"></div>
 
@@ -42,32 +42,32 @@
                 <div class="container">
                     <div class="row">
                         <div class="brand d-lg-none d-block ">
-                            <a href="" class="navbar-brand ">
+                            <a href="#!/home" class="navbar-brand ">
                                 <img src="images/logo/logo.svg" alt="" srcset="" width="130" height="50">
                             </a>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-2 mt-2 ">
+                        <div class="col-sm-2 mt-3 mb-3">
                             <div class="brand d-none d-xl-block d-lg-block">
-                                <a href="" class="navbar-brand ">
+                                <a href="#!/home" class="navbar-brand ">
                                     <img src="images/logo/logo.svg" alt="" srcset="" width="130" height="50">
                                 </a>
                             </div>
                         </div>
-                        <div class="col-sm-8 p-0 mt-3">
+                        <div class="col-sm-8 p-0 mt-3 mb-3">
                             <div class="header-midle-search mx-auto">
-                                <input type="text" class="form-control" ng-model="$root.key" placeholder="Nhập Tên Sản Phẩm">
+                                <input type="text" class="form-control" ng-model="$root.key" placeholder="Nhập Tên Sản Phẩm...">
                                 <button ng-click="search()" class="btn-search">
-                                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                                    <ion-icon name="search-outline"></ion-icon>
                                 </button>
                             </div>
                         </div>
-                        <div class="col-sm-2 mt-3 ">
+                        <div class="col-sm-2 mt-3 mb-3 ">
                             <div class="header-midle-user">
-                                <ul class="d-none d-lg-block navbar-nav" style="font-size: 24px;">
+                                <ul class="d-none d-lg-block navbar-nav text-center" style="font-size: 24px;">
                                     <div class="row text-center">
-                                        <li class="nav-item col-3 dropdown" ng-show="isUser">
+                                        <li class="nav-item col-4 dropdown" ng-show="isUser">
                                             <a class="nav-link dropdown " id="dropdownUser" data-bs-toggle="dropdown" role="button">
                                                 <ion-icon name="person-outline" role="img" class="md hydrated" aria-label="person outline"></ion-icon>
                                             </a>
@@ -79,9 +79,9 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="nav-item col-3 dropdown" ng-hide="isAvatar">
+                                        <li class="nav-item col-4 dropdown" ng-hide="isAvatar">
                                             <a class="nav-link dropdown " id="dropdownUser" data-bs-toggle="dropdown" role="button">
-                                                <img src="{{avatar}}" alt="" srcset="" width="24" height="24" style="border-radius: 10px;">
+                                                <img src="{{avatar}}" alt="" srcset="" width="35" height="35" style="border-radius: 100px;">
                                             </a>
                                             <ul class="dropdown-menu text-center" style="border: 1px solid #f2f2f2;" aria-labelledby="dropdownMenuLink">
                                                 <div class="info-customer">
@@ -93,6 +93,9 @@
                                                         <ul class="navbar-nav p-0">
                                                             <li>
                                                                 <a class="dropdown-item d-flex" href="">Hồ Sơ Cá Nhân</a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="dropdown-item d-flex" href="">Đơn Hàng</a>
                                                             </li>
                                                             <li>
                                                                 <a class="dropdown-item d-flex" href="">Thêm Tài Khoản</a>
@@ -131,12 +134,18 @@
                                                 </div>
                                             </ul>
                                         </li>
-                                        <li class="nav-item col-3">
-                                            <a class="nav-link " href="#"><ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
+                                        <li class="nav-item col-4">
+                                            <a class="nav-link " id="heart" href="#">
+                                                <ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
+                                                <span class="quantityHeart">0</span>
+
                                             </a>
                                         </li>
-                                        <li class="nav-item col-3">
-                                            <a class="nav-link" href="#"><ion-icon name="bag-handle-outline" role="img" class="md hydrated" aria-label="bag handle outline"></ion-icon>
+                                        <li class="nav-item col-4">
+                                            <a class="nav-link" id="cart" href="#!/cart">
+                                                <ion-icon name="bag-handle-outline" role="img" class="md hydrated" aria-label="bag handle outline"></ion-icon>
+                                                <span ng-show="$root.isQuantityItemsShow" class="quantityItems">0</span>
+                                                <span ng-hide="$root.isQuantityItemsHide" class="quantityItems">{{quantityItems}}</span>
                                             </a>
                                         </li>
                                     </div>
@@ -171,5 +180,7 @@
 <script src="js/controller/headerCtrl.js"></script>
 <script src="js/controller/loginCtrl.js"></script>
 <script src="js/controller/clothesCtrl.js"></script>
+<script src="js/controller/cartCtrl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
 </html>

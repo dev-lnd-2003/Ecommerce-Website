@@ -36,6 +36,12 @@ header .header-top .header-top-actions select {
     color: hsl(0deg 0% 47%);
 }
 
+header .header-main .form-control {
+    padding: 10px 15px;
+    padding-right: 50px;
+    border: 1px solid hsl(0deg 0% 93%);
+}
+
 header .header-main .header-midle-search {
 
     position: relative;
@@ -49,10 +55,16 @@ header .header-main .header-midle-search .btn-search {
     border: none;
     outline: none;
     background-color: #fff;
+    font-size: 24px;
 }
 
 header .header-main .header-midle-search .btn-search:hover {
     color: #FF8F9E;
+}
+
+header .header-main .header-midle-user ion-icon {
+    width: 35px;
+    height: 35px;
 }
 
 header .header-main .header-midle-user ul li a:hover {
@@ -83,6 +95,40 @@ header .header-main .header-midle-user .dropdown .customer-content a,
 header .header-main .header-midle-user .dropdown .customer-content-other a {
     margin-bottom: 5px;
 
+}
+
+header .header-main .header-midle-user #cart,
+header .header-main .header-midle-user #heart {
+    position: relative;
+}
+
+header .header-main .header-midle-user .quantityHeart {
+    position: absolute;
+    top: -5;
+    left: 35px;
+    color: white;
+    background: hsl(0deg 100% 70%);
+    font-weight: 700;
+    line-height: 1;
+    font-size: 14px;
+    border: 1px solid #f2f2f2;
+    padding: 2px 4px;
+    border-radius: 20px;
+}
+
+
+header .header-main .header-midle-user .quantityItems {
+    position: absolute;
+    top: -5;
+    left: 30px;
+    color: white;
+    background: hsl(0deg 100% 70%);
+    font-weight: 700;
+    line-height: 1;
+    font-size: 14px;
+    border: 1px solid #f2f2f2;
+    padding: 2px 4px;
+    border-radius: 20px;
 }
 
 /* .dropdown-menu>li>a>i {

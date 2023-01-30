@@ -1,24 +1,55 @@
-[
+{
+  "customers": [
     {
-        "id": 1,
-        "username": "duylnps21977",
-        "password": "123123",
-        "fullname": "Lê Nhật Duy",
-        "email": "duylnps21977",
-        "gender": "true",
-        "birthday": "06-12-2003",
-        "money": "15000000",
-        "avatar": "https://i.pinimg.com/564x/4a/3b/c4/4a3bc419410c35faafcfb830732a5bb6.jpg"
+      "id": 1,
+      "username": "duylnps21977",
+      "password": "123123",
+      "fullname": "Lê Nhật Duy",
+      "email": "duylnps21977",
+      "gender": "true",
+      "birthday": "06-12-2003",
+      "money": "15000000",
+      "avatar": "https://i.pinimg.com/564x/4a/3b/c4/4a3bc419410c35faafcfb830732a5bb6.jpg"
     },
     {
-        "id": 2,
-        "username": "thule2002",
-        "password": "123123",
-        "fullname": "Lê Minh Thư",
-        "email": "duylnps21977",
-        "gender": "true",
-        "birthday": "06-12-2003",
-        "money": "15000000",
-        "avatar": "https://i.pinimg.com/564x/65/bb/07/65bb072fb0cda7fb399398ddd23c270e.jpg"
+      "id": 2,
+      "username": "thule2002",
+      "password": "123123",
+      "fullname": "Lê Minh Thư",
+      "email": "duylnps21977",
+      "gender": "true",
+      "birthday": "06-12-2003",
+      "money": "15000000",
+      "avatar": "https://i.pinimg.com/564x/65/bb/07/65bb072fb0cda7fb399398ddd23c270e.jpg"
+    },
+    {
+      "username": "a",
+      "password": "a",
+      "fullname": "a",
+      "avatar": "https://i.pinimg.com/564x/69/00/d1/6900d1523554b6df7edc14804d1eca68.jpg",
+      "id": 3
+    },
+    {
+      "username": "aaaaaaaaaaa",
+      "password": "aaa",
+      "fullname": "a",
+      "avatar": "https://i.pinimg.com/564x/69/00/d1/6900d1523554b6df7edc14804d1eca68.jpg",
+      "id": 4
+    },
+    {
+      "password": "aaaaaaa",
+      "avatar": "https://i.pinimg.com/564x/69/00/d1/6900d1523554b6df7edc14804d1eca68.jpg",
+      "id": 5
+    },
+    {
+      "password": "a",
+      "avatar": "https://i.pinimg.com/564x/69/00/d1/6900d1523554b6df7edc14804d1eca68.jpg",
+      "id": 6
+    },
+    {
+      "password": "vvvvvv",
+      "avatar": "https://i.pinimg.com/564x/69/00/d1/6900d1523554b6df7edc14804d1eca68.jpg",
+      "id": 7
     }
-]
+  ]
+}
