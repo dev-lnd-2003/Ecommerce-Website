@@ -76,12 +76,12 @@ header .header-main .header-midle-user .dropdown-menu {
 
 }
 
-@media only screen and (min-width: 1920px) {
+/* @media only screen and (min-width: 1920px) {
     header .header-main .header-midle-user .dropdown-menu.show {
         transform: translate(-150px, 42px) !important;
         z-index: 0.5;
     }
-}
+} */
 
 
 
@@ -578,13 +578,13 @@ body>section.product-container.container.mt-5>div>div>div:nth-child(2)>div>ul>li
     margin-bottom: 0;
 }
 
-.product-container .product-show .product-featured .show-product-featured .item {
+.product-container .product-show #product-mid .show-product-featured #product-featured .item {
     padding: 30px;
     border: 1px solid hsl(0deg 0% 93%);
     border-radius: 10px;
 }
 
-.product-container .product-show .product-featured .title {
+.product-container .product-show #product-mid .title {
     color: hsl(0deg 0% 13%);
     font-size: 20px;
     font-weight: 600;
@@ -594,7 +594,7 @@ body>section.product-container.container.mt-5>div>div>div:nth-child(2)>div>ul>li
     margin-bottom: 30px;
 }
 
-.product-container .product-show .product-featured .product-content .product-rating {
+.product-container .product-show #product-mid #product-featured .product-content .product-rating {
     color: #f6a355;
     font-size: 18px;
     font-weight: 900;
@@ -602,41 +602,38 @@ body>section.product-container.container.mt-5>div>div>div:nth-child(2)>div>ul>li
     align-items: center;
 }
 
-.product-container .product-show .product-featured .product-title {
+.product-container .product-show #product-featured .product-title {
     font-size: 18px;
     color: hsl(0deg 0% 13%);
     text-transform: capitalize;
     margin-bottom: 3px;
 }
 
-.product-container .product-show .product-featured .product-desc {
+.product-container .product-show #product-featured .product-desc {
     color: hsl(0deg 0% 47%);
     font-size: 15px;
     font-weight: 400;
     margin-bottom: 10px;
-
-
-
 }
 
-.product-container .product-show .product-featured .price-box {
+.product-container .product-show #product-featured .price-box {
     gap: 10px;
     align-items: center;
     font-size: 18px;
     margin-bottom: 10px;
 }
 
-.product-container .product-show .product-featured .price-box .price {
+.product-container .product-show #product-featured .price-box .price {
     color: #FF8F9E;
     font-weight: 800;
     margin-bottom: 0;
 }
 
-.product-container .product-show .product-featured .price-box del {
+.product-container .product-show #product-featured .price-box del {
     color: hsl(0deg 0% 47%);
 }
 
-.product-container .product-show .product-featured .btn-add-cart {
+.product-container .product-show #product-featured .btn-add-cart {
     background-color: #FF8F9E;
     padding: 8px 15px;
     color: white;
@@ -648,31 +645,31 @@ body>section.product-container.container.mt-5>div>div>div:nth-child(2)>div>ul>li
     border: none;
 }
 
-.product-container .product-show .product-featured .btn-add-cart:hover {
+.product-container .product-show #product-featured .btn-add-cart:hover {
     background-color: rgb(255, 96, 96);
 }
 
-.product-container .product-show .product-featured .sell {
+.product-container .product-show #product-featured .sell {
     margin-bottom: 0px;
 }
 
-.product-container .product-show .product-featured .progress {
+.product-container .product-show #product-featured .progress {
     margin-bottom: 10px;
     height: 8px;
 
 }
 
-.product-container .product-show .product-featured .progress-bar {
+.product-container .product-show #product-featured .progress-bar {
     height: 8px;
     background-color: #FF8F9E;
 }
 
-.product-container .product-show .product-featured .countdown-desc {
+.product-container .product-show #product-featured .countdown-desc {
     color: hsl(0deg 0% 13%);
     font-size: 15px;
 }
 
-.product-container .product-show .product-featured .countdown-content {
+.product-container .product-show #product-featured .countdown-content {
     gap: 10px;
     padding: 5px 10px;
     background-color: #FF8F9E;
@@ -683,7 +680,7 @@ body>section.product-container.container.mt-5>div>div>div:nth-child(2)>div>ul>li
     margin-left: 5px;
 }
 
-.product-container .product-show .product-featured .countdown-box .countdown b {
+.product-container .product-show #product-featured .countdown-box .countdown b {
     font-size: 18px;
     color: rgb(0, 0, 0);
     font-weight: 800;

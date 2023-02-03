@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <section class="banner container mt-3 object-fit-cover">
+    <section class="banner container mt-3  d-none d-xl-block">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -18,7 +18,7 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                     <div class="img">
                         <img src="https://img.freepik.com/premium-photo/stylish-man-sunglasses-puffing-vapor-black_136403-12994.jpg?w=1800" class="d-block rounded-5" width="1296" height="600" alt="...">
                         <div class="banner-content">
@@ -36,7 +36,7 @@
                     </div>
 
                 </div>
-                <div class="carousel-item ">
+                <div class="carousel-item active">
                     <div class="img">
                         <img src="https://img.freepik.com/premium-photo/portrait-man-widebrimmed-hat-sunglasses-looking-camera-black_136403-13065.jpg?w=1800" class="d-block rounded-5" width="1296" height="600" alt="...">
                         <div class="banner-content">
@@ -53,7 +53,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="carousel-item ">
                     <div class="img">
                         <img src="https://img.freepik.com/premium-photo/stylish-man-sunglasses-puffing-vapor-black_136403-12994.jpg?w=1800" class="d-block rounded-5 " width="1296" height="600" style="object-position: right;" alt="...">
@@ -72,12 +71,8 @@
                     </div>
 
                 </div>
-
-
             </div>
-
         </div>
-
     </section>
     <section class="title-page mt-5">
         <div class="container">
@@ -130,17 +125,16 @@
             <div class="product-show">
                 <div class="product-new mt-5">
                     <div class="row">
-                        <div class="col-sm-3 col-md-12 col-lg-6 col-xxl-3" ng-repeat="p in filteredProducts | limitTo : 20 : begin">
+                        <div class="col-sm-3 col-md-12 col-lg-6 col-xxl-3" ng-repeat="p in filteredProducts | limitTo : 20 : begin | filter : brand">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="show-product-banner mx-auto">
                                         <img src="{{p.images_basic_0}}" style="border-radius: 10px;" class="product-img default" alt="">
-                                        <img src="{{p.images_basic_1}}" style="border-radius: 10px;" class="product-img hover" alt="">
-                                        <p class="show-product-badge">Hot</p>
+                                        <img src="{{p.images_basic_0}}" style="border-radius: 10px;" class="product-img hover" alt="">
                                         <div class="show-product-actions">
                                             <button href="" class="btn-action">
                                                 <a href="">
-                                                    <i href="" class="fa-regular fa-heart"></i>
+                                                    <i href="" class="fa-regular fa-heart active"></i>
                                                 </a>
                                             </button>
                                             <br>

@@ -5,7 +5,7 @@
         referrerpolicy="no-referrer" />
 
     <style>
-        .login {
+        #login {
             /* margin-top: 200px;
             margin-bottom: 200px; */
             margin-top: 50px;
@@ -22,14 +22,14 @@
 
         }
 
-        .login img {
+        #login img {
             height: 600px;
 
             border-top-left-radius: 30px;
             border-bottom-left-radius: 30px;
         }
 
-        .login h1 {
+        #login h1 {
             font-size: 2rem;
             font-weight: 700;
         }
@@ -46,7 +46,7 @@
             -moz-box-shadow: 1px 7px 28px 8px rgba(235, 178, 191, 0.6);
         }
 
-        .login .btn {
+        #login .btn {
             font-weight: 700;
             color: rgb(255, 255, 255);
             border-radius: 30px;
@@ -57,39 +57,39 @@
             -moz-box-shadow: 1px 7px 28px 8px rgba(235, 178, 191, 0.6);
         }
 
-        .login .btn:hover {
+        #login .btn:hover {
             background-color: white;
             color: rgba(235, 178, 191, 0.6);
         }
 
-        .login .btn-register {
+        #login .btn-register {
             color: hsl(0 -1% 27% / 1);
             text-decoration: none;
             font-weight: 500;
         }
 
-        .login .btn-register:hover {
+        #login .btn-register:hover {
             color: #FF8F9E;
             cursor: pointer;
         }
 
-        .login .fa-brands {
+        #login .fa-brands {
             padding: 10px;
         }
 
-        .login .fa-facebook {
+        #login .fa-facebook {
             cursor: pointer;
             font-size: 2.5rem;
             color: blue;
         }
 
-        .login .fa-google {
+        #login .fa-google {
             cursor: pointer;
             font-size: 2.5rem;
             color: rgba(244, 12, 12, 0.817);
         }
 
-        .login .fa-twitter {
+        #login .fa-twitter {
             cursor: pointer;
             font-size: 2.5rem;
             color: rgba(0, 149, 255, 0.601);
@@ -101,7 +101,7 @@
         }
     </style>
 </head>
-<section class="login ">
+<section id="login">
     <div class="container">
         <div class="row row-login mx-auto">
             <div class="d-none d-sm-block col-sm-6 col-lg-7 p-0">
@@ -111,7 +111,7 @@
             </div>
             <div class="col-sm-6  col-lg-5 text-center py-5 mt-5">
                 <h1 class="animate__heartBeat">Welcome Back</h1>
-                <form id="login" name="">
+                <form name="">
                     <div class="form-group pt-5 ">
                         <div class="py-3 ">
                             <input name="user" ng-model="username" type="text" class="input form-control mx-auto" placeholder="Username" required>
@@ -138,57 +138,56 @@
             </div>
         </div>
     </div>
-    <section>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header d-block p-5">
-                        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Register</h1>
-                        <h3>{{a}}</h3>
-
-                    </div>
-                    <div class="modal-body p-5">
-                        <form name="frmRegister">
-                            <div class="form-group mb-3">
-                                <label for="" class="form-label">Full Name</label>
-                                <input name="fullname" ng-model="fullnameR" type="text" class="form-control" placeholder="" required>
-                                <!-- <div style="color: red;" ng-if="submitted && frmRegister.fullname.$invalid">Vui Lòng Nhập Họ Tên</div> -->
-                                <div style="color: red;" ng-if="submitted && frmRegister.fullname.$invalid">{{message}}</div>
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="" class="form-label">Username</label>
-                                <input name="username" ng-model="usernameR" type="text" class="form-control" placeholder="" required>
-                                <!-- <div class="mt-2" style="color: red;" ng-if="submitted && frmRegister.username.$invalid">Username Không Bỏ Trống</div> -->
-                                <div class="mt-2" style="color: red;" ng-if="submitted && frmRegister.username.$invalid">{{message}}</div>
-
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="" class="form-label">Email</label>
-                                <input ng-model="emailR" type="email" class="form-control" placeholder="">
-
-                            </div>
-                            <div class="form-group mt-3">
-                                <label for="" class="form-label">Password</label>
-                                <input name="password" ng-model="passwordR" type="password" class="form-control" placeholder="" required>
-                                <!-- <div class="mt-2" style="color: red;" ng-if="submitted && frmRegister.password.$invalid">Password Không Bỏ Trống</div> -->
-                                <div class="mt-2" style="color: red;" ng-if="submitted && frmRegister.password.$invalid">{{message}}</div>
-
-                            </div>
-                            <div class="form-group mt-3">
-                                <label for="" class="form-label">Repeat Password</label>
-                                <input class="mt-2 form-control" ng-model="passwordRP" type="password" class="form-control" placeholder="">
-                            </div>
-                            <div class="mt-3">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" ng-click="register()" class="btn btn-primary">Save</button>
-                            </div>
-
-                        </form>
-
-                    </div>
+</section>
+<section id="register">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header d-block p-5">
+                    <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Register</h1>
+                    <h3>{{a}}</h3>
 
                 </div>
+                <div class="modal-body p-5">
+                    <form name="frmRegister">
+                        <div class="form-group mb-3">
+                            <label for="" class="form-label">Full Name <span style="color: red;">*</span> </label>
+                            <input name="fullname" ng-model="fullnameR" type="text" class="form-control" placeholder="" required>
+                            <div style="color: red;" ng-if="submitted && frmRegister.fullname.$invalid">Vui Lòng Nhập Họ Tên</div>
+                            <!-- <div style="color: red;" ng-if="submitted && frmRegister.fullname.$invalid">{{message}}</div> -->
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="" class="form-label">Username <span style="color: red;">*</span></label>
+                            <input name="username" ng-model="usernameR" type="text" class="form-control" placeholder="" required>
+                            <div class="mt-2" style="color: red;" ng-if="submitted && frmRegister.username.$invalid">Username Không Bỏ Trống</div>
+                            <div class="mt-2" style="color: red;" ng-show="usernameR.length < 6">Username Không dưới 6 Kí Tự</div>
+
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="" class="form-label">Email</label>
+                            <input ng-model="emailR" type="email" class="form-control" placeholder="">
+
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="" class="form-label">Password <span style="color: red;">*</span></label>
+                            <input name="password" ng-model="passwordR" type="password" class="form-control" placeholder="" required>
+                            <div class="mt-2" style="color: red;" ng-if="submitted && frmRegister.password.$invalid">Password Phải Trên 6 Kí Tự</div>
+                            <div class="mt-2" style="color: red;" ng-show="passwordR.length <6">Password Phải Trên 6 Kí Tự</div>
+                        </div>
+                        <!-- <div class="form-group mt-3">
+                            <label for="" class="form-label">Repeat Password</label>
+                            <input class="form-control" ng-model="passwordRP" type="password" class="form-control" placeholder="">
+                        </div> -->
+                        <div class="mt-3">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" ng-click="register()" class="btn btn-primary">Save</button>
+                        </div>
+
+                    </form>
+
+                </div>
+
             </div>
         </div>
-    </section>
+    </div>
 </section>

@@ -12,7 +12,6 @@ app.service("productService", function ($http, $filter, $route) {
     }
 
     let cartItems = []
-
     this.addToCart = function (product, user) {
         let exists = false;
         for (let i = 0; i < cartItems.length; i++) {
@@ -30,9 +29,12 @@ app.service("productService", function ($http, $filter, $route) {
                 user,
                 quantity: 1,
             })
+
+
         }
         // Lưu giỏ hàng vào localStorage
         localStorage.setItem('cart', JSON.stringify(cartItems));
+
     }
 
     this.removeProduct = function (index) {

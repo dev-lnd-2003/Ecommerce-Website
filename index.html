@@ -34,10 +34,10 @@
 </head>
 
 <body ng-app="myApp">
-    <section class=" z-99999 bg-white" ng-controller="headerCtrl">
-        <header>
-            <div ng-include="'layout/headertop.html'"></div>
 
+    <section class="sticky-top bg-white" ng-controller="headerCtrl">
+        <header>
+            <section ng-include="'layout/headertop.html'"></section>
             <section class="header-main mt-3 ">
                 <div class="container">
                     <div class="row">
@@ -155,17 +155,17 @@
                     </div>
                 </div>
             </section>
-
-            <div ng-include="'layout/headerbottom.html'"></div>
+            <section ng-include="'layout/headerbottom.html'"></section>
         </header>
     </section>
-    <div ng-include="'layout/navbarmobile.html'"></div>
-    <div class="">
+    <section ng-include="'layout/navbarmobile.html'"></section>
+    <section>
         <ng-view></ng-view>
-    </div>
-    <div ng-include="'layout/footer.html'"></div>
+    </section>
+    <section ng-include="'layout/footer.html'"></section>
 
 </body>
+
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/jquery-3.6.3.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>

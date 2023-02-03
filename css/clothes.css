@@ -63,12 +63,12 @@ header .header-main .header-midle-user .dropdown-menu {
 
 }
 
-@media only screen and (min-width: 1920px) {
+/* @media only screen and (min-width: 1920px) {
     header .header-main .header-midle-user .dropdown-menu.show {
         transform: translate(-150px, 42px) !important;
         z-index: 0.5;
     }
-}
+} */
 
 
 

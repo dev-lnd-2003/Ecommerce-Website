@@ -30,7 +30,8 @@ app.controller("loginCtrl", function ($scope, $http, $location, $window, $route)
         }
     }
     $scope.register = function () {
-        let user = check_username($scope.usernameR, $scope.passwordR)
+
+        let user = check_username($scope.usernameR)
         let check_form1 = check_form($scope.fullnameR, $scope.usernameR, $scope.passwordR)
 
         if (check_form1) {
@@ -65,29 +66,29 @@ app.controller("loginCtrl", function ($scope, $http, $location, $window, $route)
 
     }
 
-    function check_username(username, password) {
+    function check_username(username) {
         for (let i = 0; i < $scope.customers.length; i++) {
-            if ($scope.customers[i].username == username && $scope.customers[i].password == password) {
+            if ($scope.customers[i].username == username) {
                 return false;
             }
         }
         return true;
     }
 
-    function check_form(fullname, username, password) {
-        if (fullname == null && username == null && password == null) {
+    function check_form(fullname, username, password1, password2) {
+        if (fullname == null) {
             $scope.submitted = true
-            $scope.message = "Không để trống"
-
             return false
         }
-        // if (password.length < 7) {
-        //     $scope.submitted = true
-        //     $scope.message = "Vui Lòng Nhập Username Hơn 7 Kí Tự"
-        //     return false
-        // }
-
+        if (username == null) {
+            $scope.submitted = true
+            return false
+        }
+        if (password1 == null || password1.length < 6) {
+            $scope.submitted = true
+            return false
+        }
         return true
-
     }
+
 })

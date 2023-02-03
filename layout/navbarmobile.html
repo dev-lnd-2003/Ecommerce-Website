@@ -1,25 +1,328 @@
 <!-- navbar-mobile -->
-<section class="nav-button-offcanvas fixed-bottom d-xl-none d-block" style="background-color: #fff;">
+
+<head>
+    <style>
+        .offcanvas.offcanvas-start {
+            width: 350px !important;
+        }
+    </style>
+</head>
+<section class="nav-button-offcanvas fixed-bottom d-xl-none d-block" style="background-color: #fff;box-shadow: 0 0 10px hsl(0deg 0% 0% / 25%);">
     <nav class="navbar navbar-expand-lg ">
-        <button class="navbar-toggler border-0" href="#offcanvasExample1" type="button" data-bs-toggle="offcanvas"
-            role="button" aria-controls="offcanvasExample">
+        <button class="navbar-toggler border-0" href="#offcanvasExample1" type="button" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasExample">
             <span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
-                    viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
                 </svg>
             </span>
         </button>
+        <a href="#!/login" class="navbar-toggler border-0">
+            <ion-icon name="person-outline" style="width: 30; height: 30;"></ion-icon>
+        </a>
+        <a href="#!/home" class="navbar-toggler border-0">
+            <ion-icon name="home-outline" style="width: 30; height: 30;"></ion-icon>
+        </a class=>
+        <button class="navbar-toggler border-0">
+            <ion-icon name="heart-outline" style="width: 30; height: 30;"></ion-icon>
+        </button>
 
-        <button class="navbar-toggler border-0" href="#offcanvasExample" type="button" data-bs-toggle="offcanvas"
-            role="button" aria-controls="offcanvasExample">
-            <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                    class="bi bi-info-circle" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                    <path
-                        d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
-                </svg></span>
+        <button class="navbar-toggler border-0" href="#offcanvasExample2" type="button" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasExample">
+            <span><ion-icon name="grid-outline" style="width: 30; height: 30;"></ion-icon></span>
         </button>
     </nav>
 </section>
+<div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header gap-1">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel" style="font-size: 20px; color: #454545;">Loại Sản Phẩm</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body product-container ">
+        <section id="sidebar-top ">
+            <div class="row">
+                <div class="sidebar-top" style="border: none;">
+                    <ul class="list-group list-group-light ">
+                        <li class="list-group-item border-0 ">
+                            <div data-bs-toggle="collapse" data-bs-target="#clothes" class="img">
+                                <div class="d-flex" style="gap: 10px;">
+                                    <img class="mt-1 mb-1" src="../images/icons/dress.svg" width="20" height="20" alt="" srcset="">
+                                    <span>Quần Áo</span>
+                                    <div class="ms-auto">
+                                        <span>+</span>
+                                    </div>
+                                </div>
+
+                                <div id="clothes" class="collapse">
+                                    <hr>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Sơ Mi</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Quần Short</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Áo Khoác</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Đầm & Áo Dài</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item border-0 ">
+                            <div data-bs-toggle="collapse" data-bs-target="#shoes" class="img">
+                                <div class="d-flex" style="gap: 10px;">
+                                    <img class="mt-1 mb-1" src="../images/icons/shoes.svg" width="20" height="20" alt="" srcset="">
+                                    <span>Giày Dép</span>
+                                    <div class="ms-auto">
+                                        <span>+</span>
+                                    </div>
+                                </div>
+
+                                <div id="shoes" class="collapse">
+                                    <hr>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Thể Thao</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Truyền Thống</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Hiện Đại</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Giày Bảo Hộ</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item border-0 ">
+                            <div data-bs-toggle="collapse" data-bs-target="#jewelry" class="img">
+                                <div class="d-flex" style="gap: 10px;">
+                                    <img class="mt-1 mb-1" src="../images/icons/jewelry.svg" width="20" height="20" alt="" srcset="">
+                                    <span>Trang Sức</span>
+                                    <div class="ms-auto">
+                                        <span>+</span>
+                                    </div>
+                                </div>
+
+                                <div id="jewelry" class="collapse">
+                                    <hr>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Bông Tai</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Nhẫn Cặp</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Lắc Tay</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Dây Chuyền</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item border-0 ">
+                            <div data-bs-toggle="collapse" data-bs-target="#perfume" class="img">
+                                <div class="d-flex" style="gap: 10px;">
+                                    <img class="mt-1 mb-1" src="../images/icons/perfume.svg" width="20" height="20" alt="" srcset="">
+                                    <span>Nước Hoa</span>
+                                    <div class="ms-auto">
+                                        <span>+</span>
+                                    </div>
+                                </div>
+
+                                <div id="perfume" class="collapse">
+                                    <hr>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Quyến Rũ</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Nhẹ Nhàng</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Hàng Hiệu</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Dạ Hội</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item border-0 ">
+                            <div data-bs-toggle="collapse" data-bs-target="#cosmetics" class="img">
+                                <div class="d-flex" style="gap: 10px;">
+                                    <img class="mt-1 mb-1" src="../images/icons/cosmetics.svg" width="20" height="20" alt="" srcset="">
+                                    <span>Quần Áo</span>
+                                    <div class="ms-auto">
+                                        <span>+</span>
+                                    </div>
+                                </div>
+
+                                <div id="cosmetics" class="collapse">
+                                    <hr>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Sơ Mi</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Quần Short</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Áo Khoác</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Đầm & Áo Dài</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item border-0 ">
+                            <div data-bs-toggle="collapse" data-bs-target="#bag" class="img">
+                                <div class="d-flex" style="gap: 10px;">
+                                    <img class="mt-1 mb-1" src="../images/icons/bag.svg" width="20" height="20" alt="" srcset="">
+                                    <span>Túi Xách</span>
+                                    <div class="ms-auto">
+                                        <span>+</span>
+                                    </div>
+                                </div>
+
+                                <div id="bag" class="collapse">
+                                    <hr>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Sơ Mi</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Quần Short</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Áo Khoác</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                    <div class="product d-flex">
+                                        <a class="product-name" href="">Đầm & Áo Dài</a>
+                                        <span class="stocks ms-auto">36</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="sidebar-bottom">
+            <div class="row">
+                <div class="sidebar-bottom p-3">
+                    <ul class="list-group list-group-light">
+                        <li class="list-group-item border-0 title">Best Sellers</li>
+                        <li class="list-group-item border-0 ">
+                            <div class="d-flex" style="gap: 10px;">
+                                <img src="../images/products/1.jpg" alt="" width="75" height="70">
+                                <div class="info-product ">
+                                    <p class="product-name">
+                                        <a href="">Giày Vải Cho Bé</a>
+                                    </p>
+                                    <div class="product-rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="price-box d-flex ">
+                                        <del>180.000 <sup> ₫</sup></del>
+                                        <p class="price">90.000 <sup> ₫</sup></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item border-0 ">
+                            <div class="d-flex" style="gap: 10px;">
+                                <img src="../images/products/2.jpg" alt="" width="75" height="70">
+                                <div class="info-product ">
+                                    <p class="product-name">
+                                        <a href="">Hoddies Nam</a>
+                                    </p>
+                                    <div class="product-rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="price-box d-flex">
+                                        <del>200.000 <sup> ₫</sup></del>
+                                        <p class="price">150.000 <sup> ₫</sup></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item border-0 ">
+                            <div class="d-flex" style="gap: 10px;">
+                                <img src="../images/products/3.jpg" alt="" width="75" height="70">
+                                <div class="info-product ">
+                                    <p class="product-name">
+                                        <a href="">Áo Nữ</a>
+                                    </p>
+                                    <div class="product-rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="price-box d-flex">
+                                        <del>130.000 <sup> ₫</sup></del>
+                                        <p class="price">50.000 <sup> ₫</sup></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item border-0 ">
+                            <div class="d-flex" style="gap: 10px;">
+                                <img src="../images/products/4.jpg" alt="" width="75" height="70">
+                                <div class="info-product ">
+                                    <p class="product-name">
+                                        <a href="">Mũ Nam</a>
+                                    </p>
+                                    <div class="product-rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="price-box d-flex">
+                                        <del>120.000 <sup> ₫</sup></del>
+                                        <p class="price">70.000 <sup> ₫</sup></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <section>
+        <div class="container" ng-controller="adminCtrl">
+            <div class="row">
+                <!-- <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="">Username</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div> -->
+                <div class="col-sm-12 mt-5">
+                    <div class="table-responsive">
+                        <table class="table table-primary">
+                            <thead>
+                                <tr>
+                                    <th>Full Name</th>
+                                    <th>Username</th>
+                                    <th>Password</th>
+                                    <th>Thao Tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="" ng-repeat="u in customer">
+                                    <td>{{u.fullname}}</td>
+                                    <td>{{u.username}}</td>
+                                    <td>{{u.password}}</td>
+                                    <td>
+                                        <div class="col-sm-6">
+                                            <a href="">Xoá</a>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <a href="">Sửa</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
+<script>
+    let app = angular.module("myApp", [])
+    app.controller("adminCtrl", function ($scope, $http) {
+        $scope.customer = []
+        $http.get("http://localhost:3000/customers").then(function (reponse) {
+            $scope.customer = reponse.data;
+            console.log($scope.customer);
+        })
+    })
+
+</script>

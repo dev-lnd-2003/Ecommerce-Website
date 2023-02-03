@@ -45,11 +45,13 @@ app.controller("clothesCtrl", function ($scope, $http, $location, productService
 
             productService.addToCart(product, $scope.info)
 
+
             $scope.cartItems = JSON.parse(localStorage.getItem('cart'))
             for (let i = 0; i < $scope.cartItems.length; i++) {
                 $rootScope.quantityItems = i + 1;
-                console.log("Số lượng : " + i);
+
             }
+
             $rootScope.isQuantityItemsShow = false
             $rootScope.isQuantityItemsHide = false
 

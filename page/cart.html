@@ -69,62 +69,68 @@
 <body class="bg-light ">
 
     <section class="container cart">
-        <h3 class="mb-2 text-center">Giỏ Hàng</h3>
-        <h6 class="mb-5 text-center">Chúc Bạn Mua Sắm Vui Vẻ</h6>
-        <div class="row ">
-            <div class="card">
-                <div class="card-body ">
-                    <div class="table-responsive">
-                        <table class="table table-borderless">
-                            <thead>
-                                <tr class="text-center ">
-                                    <th>STT</th>
-                                    <th>Sản Phẩm</th>
-                                    <th>Tên Sản Phẩm</th>
-                                    <th>Đơn Giá</th>
-                                    <th>Số Lượng</th>
-                                    <th>Thao Tác</th>
-                                    <th>Chọn</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="" style=" vertical-align: middle;" ng-repeat="items in cartItems">
-                                    <td style="font-size: 16px;" class="text-center">{{$index+1}}</td>
-                                    <td class="text-center"><img src="{{items.product.images_small_0}}" alt="" srcset="">
-                                    </td>
-                                    <td class="product-name">
-                                        {{items.product.product_name}}
-                                    </td>
-                                    <td>{{items.product.price | currency : "" : 0}} <sup>đ</sup></td>
-                                    <td class="text-center">{{items.quantity}}
-                                    </td>
-                                    <td class="text-center"><a class="btn-delete" ng-click="removeProduct($index)" href="">Xoá</a></td>
-                                    <td>
-                                        <div class="text-center">
-                                            <input ng-model="choose" ng-checked="all" class="form-check-input text-center" type="checkbox" value="" id="flexCheckDefault">
-                                        </div>
-                                    </td>
+        <section>
+            <h3 class="mb-2 text-center">Giỏ Hàng</h3>
+            <h6 class="mb-5 text-center">Chúc Bạn Mua Sắm Vui Vẻ</h6>
+        </section>
+        <section>
+            <div class="row ">
+                <div class="card">
+                    <div class="card-body ">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <thead>
+                                    <tr class="text-center ">
+                                        <th>STT</th>
+                                        <th>Sản Phẩm</th>
+                                        <th>Tên Sản Phẩm</th>
+                                        <th>Đơn Giá</th>
+                                        <th>Số Lượng</th>
+                                        <th>Thao Tác</th>
+                                        <th>Chọn</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="" style=" vertical-align: middle;" ng-repeat="items in cartItems">
+                                        <td style="font-size: 16px;" class="text-center">{{$index+1}}</td>
+                                        <td class="text-center"><img src="{{items.product.images_small_0}}" alt="" srcset="">
+                                        </td>
+                                        <td class="product-name">
+                                            {{items.product.product_name}}
+                                        </td>
+                                        <td>{{items.product.price | currency : "" : 0}} <sup>đ</sup></td>
+                                        <td class="text-center">{{items.quantity}}
+                                        </td>
+                                        <td class="text-center"><a class="btn-delete" ng-click="removeProduct($index)" href="">Xoá</a></td>
+                                        <td>
+                                            <div class="text-center">
+                                                <input ng-model="choose" ng-checked="all" class="form-check-input text-center" type="checkbox" value="" id="flexCheckDefault">
+                                            </div>
+                                        </td>
 
-                                </tr>
-                            </tbody>
-                        </table>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="card">
-                <div class="card-body">
-                    <div class="content-order d-flex align-items-center">
-                        <h3 class="total-price">Tổng Tiền : {{totalPrice | currency : "" : 0}}</h3>
-                        <button class="ms-auto btn-buy">
-                            Thanh Toán
-                        </button>
-                    </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="content-order d-flex align-items-center">
+                            <h3 class="total-price">Tổng Tiền : {{totalPrice | currency : "" : 0}}</h3>
+                            <button class="ms-auto btn-buy">
+                                Thanh Toán
+                            </button>
+                        </div>
 
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </section>
 </body>
 
